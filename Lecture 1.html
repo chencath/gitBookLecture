@@ -1,0 +1,471 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Lecture 1 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Lecture 2.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2" data-path="Lecture 1.html">
+            
+                <a href="Lecture 1.html">
+            
+                    
+                    Lecture 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="Lecture 2.html">
+            
+                <a href="Lecture 2.html">
+            
+                    
+                    Lecture 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="Lecture 3.html">
+            
+                <a href="Lecture 3.html">
+            
+                    
+                    Lecture 3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="Lecture 4.html">
+            
+                <a href="Lecture 4.html">
+            
+                    
+                    Lecture 4
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Lecture 1</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="lecture-1">Lecture 1</h1>
+<p>This lecture taught by of <a href="https://www.gla.ac.uk/schools/business/staff/cathyyi-hsuanchen/" target="_blank">Prof. Cathy Yi-Hsuan Chen</a>
+focuses on introducing the syntax of python, data types, and data structure.</p>
+<p>Specifically, the code can be found in the <a href="https://github.com/QuantLet/DEDA_Class_2017" target="_blank">Github</a> </p>
+<h2 id="outlines">Outlines</h2>
+<ul>
+<li><a href="#sections">Basic syntax</a></li>
+<li><p><a href="#headers">Data Structure</a></p>
+<ul>
+<li><a href="#quotes">List</a></li>
+<li><a href="#emphasis">Dictionary</a></li>
+<li><a href="#horizontal-rule">Tuple</a></li>
+<li><a href="#lists">Set</a></li>
+</ul>
+</li>
+<li><p><a href="#additional-resources">Additional Resources</a></p>
+</li>
+</ul>
+<hr>
+<h2 id="basic-syntax">Basic Syntax</h2>
+<ul>
+<li>try basic operations:
++, -, <em>, /, %, *</em>, //</li>
+</ul>
+<pre><code class="lang-python">a = <span class="hljs-number">5</span>
+b = <span class="hljs-number">3</span>
+a *= <span class="hljs-number">2</span>  <span class="hljs-comment"># 10</span>
+round(a / b, <span class="hljs-number">4</span>)  <span class="hljs-comment"># 3.3333</span>
+
+c = <span class="hljs-string">&apos;10&apos;</span>
+d = <span class="hljs-string">&apos;20&apos;</span>
+e = c + d  <span class="hljs-comment"># &apos;1020&apos;</span>
+f = int(c) + int(d)  <span class="hljs-comment"># 30</span>
+</code></pre>
+<ul>
+<li>try comparision operations: ==, &lt;, &lt;=, &gt;, &gt;=, !=</li>
+</ul>
+<h2 id="data-structure">Data Structure</h2>
+<p><strong>List, dictionary,set, tuple</strong> are very popular data types in Python universe. </p>
+<blockquote>
+<p><strong>List</strong> is a collection which is ordered and changeable. Allows duplicate members</p>
+<p><strong>Dictionary</strong> is a collection which is unordered, changeable and indexed. No duplicate members</p>
+<p><strong>Set</strong> is a collection which is unordered and unindexed. No duplicate members</p>
+<p><strong>Tuple</strong> is a collection which is ordered and unchangeable. Allows duplicate members</p>
+</blockquote>
+<p>More detail can be found <a href="https://www.w3schools.com/python/python_lists.asp" target="_blank">here</a></p>
+<ul>
+<li>Create a list for a sequence of strings</li>
+</ul>
+<pre><code class="lang-python">welcome_list = [<span class="hljs-string">&apos;Welcome&apos;</span>, <span class="hljs-string">&apos;to&apos;</span>, <span class="hljs-string">&apos;Python&apos;</span>, <span class="hljs-string">&apos;World.&apos;</span>, <span class="hljs-string">&apos;It\&apos;s&apos;</span>, <span class="hljs-string">&apos;Amazing&apos;</span>]
+<span class="hljs-comment"># using back slash to escape the single quote.</span>
+
+<span class="hljs-comment"># using for loop to iterate all elements in the list.</span>
+<span class="hljs-keyword">for</span> word <span class="hljs-keyword">in</span> welcome_list:
+    print(word)
+
+<span class="hljs-comment"># a string is also an object, using the join method to connect all the words in the list.</span>
+welcome_sentence = <span class="hljs-string">&apos; &apos;</span>.join(welcome_list)
+
+<span class="hljs-comment"># slicing string by indices.</span>
+welcome_sliced = welcome_sentence[<span class="hljs-number">0</span>:<span class="hljs-number">10</span>]
+<span class="hljs-comment"># try changing the indices to negative.</span>
+
+<span class="hljs-comment"># see other methods of string object, like:</span>
+welcome_upper_case = welcome_sentence.upper()
+<span class="hljs-comment"># by using dir() function, or help() function</span>
+dir(str)
+<span class="hljs-comment"># or a str instance</span>
+dir(welcome_upper_case)
+<span class="hljs-comment"># likewise,</span>
+help(str)
+</code></pre>
+<ul>
+<li>Formating string object</li>
+</ul>
+<pre><code class="lang-python">greeting = <span class="hljs-string">&apos;Hallo&apos;</span>
+name = <span class="hljs-string">&apos;Jon&apos;</span>
+<span class="hljs-comment"># using format method</span>
+welcome_jon = <span class="hljs-string">&apos;{}, {}. &apos;</span>.format(greeting, name.upper()) + welcome_sentence
+<span class="hljs-comment"># using f string, you can write variable name into brackets, directly.</span>
+welcome_jon_f = f<span class="hljs-string">&apos;{greeting}, {name.upper()}. &apos;</span> + welcome_sentence
+</code></pre>
+<ul>
+<li>Methods for list object, including &quot;append&quot;, &quot;insert&quot;, &quot;pop&quot;, &quot;remove&quot;</li>
+</ul>
+<pre><code class="lang-python">natr_language = [<span class="hljs-string">&apos;English&apos;</span>, <span class="hljs-string">&apos;German&apos;</span>, <span class="hljs-string">&apos;Chinese&apos;</span>]
+prog_language = [<span class="hljs-string">&apos;C++&apos;</span>, <span class="hljs-string">&apos;Java&apos;</span>, <span class="hljs-string">&apos;C#&apos;</span>]
+<span class="hljs-comment"># how many elements in a list?</span>
+len(natr_language)  <span class="hljs-comment"># 3</span>
+<span class="hljs-comment"># how many elements in a string?</span>
+len(natr_language[<span class="hljs-number">0</span>])  <span class="hljs-comment"># 7</span>
+
+<span class="hljs-comment"># append() allows you to add 1 element at the end of the list</span>
+natr_language.append(<span class="hljs-string">&apos;Spanish&apos;</span>)  <span class="hljs-comment"># [&apos;English&apos;, &apos;German&apos;, &apos;Chinese&apos;, &apos;Spanish&apos;]</span>
+</code></pre>
+<pre><code class="lang-python"><span class="hljs-comment"># insert() allows you to add 1 element at arbitrary place</span>
+prog_language.insert(<span class="hljs-number">0</span>, <span class="hljs-string">&apos;Python&apos;</span>)  <span class="hljs-comment"># [&apos;Python&apos;, &apos;C++&apos;, &apos;Java&apos;, &apos;C#&apos;]</span>
+</code></pre>
+<pre><code class="lang-python"><span class="hljs-comment"># extend() allows you to add multiple elements at the end of the list</span>
+python = [<span class="hljs-string">&apos;python 2.7&apos;</span>, <span class="hljs-string">&apos;python 3.6&apos;</span>]
+prog_language.append(python)  <span class="hljs-comment"># [&apos;Python&apos;, &apos;C++&apos;, &apos;Java&apos;, &apos;C#&apos;, [&apos;python 2.7&apos;, &apos;python 3.6&apos;]]</span>
+more_language = [<span class="hljs-string">&apos;Japanese&apos;</span>, <span class="hljs-string">&apos;Korean&apos;</span>]
+natr_language.extend(more_language)  <span class="hljs-comment"># [&apos;English&apos;, &apos;German&apos;, &apos;Chinese&apos;, &apos;Spanish&apos;, &apos;Japanese&apos;, &apos;Korean&apos;]</span>
+</code></pre>
+<pre><code class="lang-python"><span class="hljs-comment"># remove() elements</span>
+prog_language.remove(python)  <span class="hljs-comment"># [&apos;Python&apos;, &apos;C++&apos;, &apos;Java&apos;, &apos;C#&apos;]</span>
+natr_language.pop(<span class="hljs-number">-1</span>)  <span class="hljs-comment"># &apos;Korean&apos; pops out. [&apos;English&apos;, &apos;German&apos;, &apos;Chinese&apos;, &apos;Spanish&apos;, &apos;Japanese&apos;]</span>
+<span class="hljs-keyword">del</span> prog_language[<span class="hljs-number">-1</span>]  <span class="hljs-comment"># [&apos;Python&apos;, &apos;C++&apos;, &apos;Java&apos;]</span>
+</code></pre>
+<pre><code class="lang-python"><span class="hljs-comment"># iterate in list</span>
+<span class="hljs-keyword">for</span> lang <span class="hljs-keyword">in</span> prog_language:
+    print(lang)
+<span class="hljs-comment"># iterate in list with index</span>
+<span class="hljs-keyword">for</span> num, lang <span class="hljs-keyword">in</span> enumerate(natr_language):
+    print(f<span class="hljs-string">&apos;{num}. {lang}&apos;</span>)
+</code></pre>
+<pre><code class="lang-python"><span class="hljs-comment"># list to string</span>
+natr_language_str = <span class="hljs-string">&apos;, &apos;</span>.join(natr_language)  <span class="hljs-comment"># &apos;Spanish, Japanese, German, English, Chinese&apos;</span>
+natr_language_new = natr_language_str.split(<span class="hljs-string">&apos;, &apos;</span>)  <span class="hljs-comment"># [&apos;Spanish&apos;, &apos;Japanese&apos;, &apos;German&apos;, &apos;English&apos;, &apos;Chinese&apos;]</span>
+</code></pre>
+<pre><code class="lang-python"><span class="hljs-comment"># looping in the list. The basic syntax is:</span>
+<span class="hljs-comment"># [func(ele) for func(ele) in a_list if func(ele)]</span>
+<span class="hljs-comment"># For example:</span>
+people = [language + <span class="hljs-string">&apos; People&apos;</span> <span class="hljs-keyword">for</span> language <span class="hljs-keyword">in</span> natr_language_new <span class="hljs-keyword">if</span> language.endswith(<span class="hljs-string">&apos;ese&apos;</span>)]
+</code></pre>
+<pre><code class="lang-python"><span class="hljs-comment"># Indexing</span>
+p = [<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">5</span>,<span class="hljs-number">7</span>,<span class="hljs-number">11</span>]
+<span class="hljs-comment"># indexing</span>
+p[<span class="hljs-number">0</span>] <span class="hljs-comment"># 2</span>
+p[<span class="hljs-number">-1</span>] <span class="hljs-comment"># 11</span>
+
+<span class="hljs-comment"># sclicing</span>
+p[:<span class="hljs-number">2</span>] <span class="hljs-comment"># [2, 3]</span>
+p[<span class="hljs-number">-3</span>:] <span class="hljs-comment"># [5, 7, 11]</span>
+
+<span class="hljs-comment"># appending</span>
+p.append(<span class="hljs-number">13</span>) <span class="hljs-comment"># [2, 3, 5, 7, 11, 13]</span>
+p.extend([<span class="hljs-number">17</span>,<span class="hljs-number">19</span>]) <span class="hljs-comment"># [2, 3, 5, 7, 11, 13, 17, 19]</span>
+
+l = list(<span class="hljs-string">&apos;hallo&apos;</span>) <span class="hljs-comment"># [&apos;h&apos;, &apos;a&apos;, &apos;l&apos;, &apos;l&apos;, &apos;o&apos;]</span>
+l.sort() <span class="hljs-comment"># [&apos;a&apos;, &apos;h&apos;, &apos;l&apos;, &apos;l&apos;, &apos;o&apos;]</span>
+</code></pre>
+<ul>
+<li>Tuple is immutable</li>
+</ul>
+<pre><code class="lang-python">gperson_list = [<span class="hljs-string">&apos;Jon Dow&apos;</span>, <span class="hljs-string">&apos;06-04-2000&apos;</span>, <span class="hljs-string">&apos;Male&apos;</span>, <span class="hljs-string">&apos;U.S.A&apos;</span>]
+person_tuple = (<span class="hljs-string">&apos;Jon Dow&apos;</span>, <span class="hljs-string">&apos;06-04-2000&apos;</span>, <span class="hljs-string">&apos;Male&apos;</span>, <span class="hljs-string">&apos;U.S.A&apos;</span>)
+person_list[<span class="hljs-number">0</span>] = <span class="hljs-string">&apos;Allan Lee&apos;</span>  <span class="hljs-comment"># [&apos;Allan Lee&apos;, &apos;06-04-2000&apos;, &apos;Male&apos;, &apos;U.S.A&apos;]</span>
+person_tuple[<span class="hljs-number">0</span>] = <span class="hljs-string">&apos;Allan Lee&apos;</span>  <span class="hljs-comment"># tuple&apos; object does not support item assignment</span>
+</code></pre>
+<ul>
+<li>Set is a collection which is unordered and unindexed</li>
+</ul>
+<pre><code class="lang-python">countries_1 = {<span class="hljs-string">&apos;China&apos;</span>, <span class="hljs-string">&apos;Korea&apos;</span>, <span class="hljs-string">&apos;Japan&apos;</span>, <span class="hljs-string">&apos;Turkey&apos;</span>, <span class="hljs-string">&apos;Singapore&apos;</span>, <span class="hljs-string">&apos;Russia&apos;</span>, <span class="hljs-string">&apos;Japan&apos;</span>}
+countries_2 = {<span class="hljs-string">&apos;UK&apos;</span>, <span class="hljs-string">&apos;Germany&apos;</span>, <span class="hljs-string">&apos;France&apos;</span>, <span class="hljs-string">&apos;Spain&apos;</span>, <span class="hljs-string">&apos;Italy&apos;</span>, <span class="hljs-string">&apos;Russia&apos;</span>, <span class="hljs-string">&apos;Turkey&apos;</span>}
+
+print(countries_1)  <span class="hljs-comment"># sets will drop duplicated elements automatically</span>
+count_inter = countries_1.intersection(countries_2)  <span class="hljs-comment"># {&apos;Russia&apos;, &apos;Turkey&apos;}</span>
+count_1_diff = countries_1.difference(countries_2)  <span class="hljs-comment"># {&apos;China&apos;, &apos;Japan&apos;, &apos;Korea&apos;, &apos;Singapore&apos;}</span>
+count_2_diff = countries_2.difference(countries_1)  <span class="hljs-comment"># {&apos;France&apos;, &apos;Germany&apos;, &apos;Italy&apos;, &apos;Spain&apos;, &apos;UK&apos;}</span>
+countries_new = countries_1.union(countries_2)  <span class="hljs-comment"># merge two sets into 1 and without duplicates</span>
+</code></pre>
+<ul>
+<li>Dictionary is in the form of <strong>Key-Value</strong> pair</li>
+</ul>
+<pre><code class="lang-python">course = {<span class="hljs-string">&apos;name&apos;</span>:<span class="hljs-string">&apos;DEDA&apos;</span>, <span class="hljs-string">&apos;unit&apos;</span>:<span class="hljs-number">1</span>} <span class="hljs-comment"># {&apos;name&apos;: &apos;DEDA&apos;, &apos;unit&apos;: 0}</span>
+
+<span class="hljs-comment"># accessing</span>
+course[<span class="hljs-string">&apos;unit&apos;</span>] <span class="hljs-comment"># 0</span>
+course[<span class="hljs-string">&apos;unit&apos;</span>] = <span class="hljs-number">1</span>
+
+<span class="hljs-comment"># get keys</span>
+course.keys() <span class="hljs-comment"># [&apos;name&apos;, &apos;unit&apos;]</span>
+course.values() <span class="hljs-comment"># [&apos;DEDA&apos;, 1]</span>
+<span class="hljs-comment"># ATTENTION: Output type varies with version of Python: {&apos;Python2.7&apos;: list, &apos;Python3.7&apos;: &apos;its own data type&apos;}</span>
+
+<span class="hljs-comment"># adding values</span>
+course.update({<span class="hljs-string">&apos;lecturers&apos;</span>:[<span class="hljs-string">&apos;Chen&apos;</span>,<span class="hljs-string">&apos;Haerdle&apos;</span>]}) <span class="hljs-comment"># {&apos;lecturers&apos;: [&apos;Chen&apos;, &apos;Haerdle&apos;], &apos;name&apos;: &apos;DEDA&apos;, &apos;unit&apos;: 1}</span>
+</code></pre>
+<h2 id="additional-resources">Additional Resources</h2>
+<ul>
+<li><a href="https://www.w3schools.com/python/default.asp" target="_blank">W3schools</a></li>
+<li><a href="https://repl.it/" target="_blank">Online Python Interpreter</a></li>
+<li><a href="https://pandas.pydata.org/pandas-docs/stable/reference/general_functions.html" target="_blank">Pandas document</a></li>
+<li><a href="http://quantlet.de/" target="_blank">Quantlet</a></li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Lecture 2.html" class="navigation navigation-next " aria-label="Next page: Lecture 2">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Lecture 1","level":"1.2","depth":1,"next":{"title":"Lecture 2","level":"1.3","depth":1,"path":"Lecture 2.md","ref":"Lecture 2.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Lecture 1.md","mtime":"2020-03-01T21:43:03.256Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-12T23:06:44.317Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

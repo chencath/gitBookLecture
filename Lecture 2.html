@@ -1,0 +1,452 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Lecture 2 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Lecture 3.html" />
+    
+    
+    <link rel="prev" href="Lecture 1.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="Lecture 1.html">
+            
+                <a href="Lecture 1.html">
+            
+                    
+                    Lecture 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="Lecture 2.html">
+            
+                <a href="Lecture 2.html">
+            
+                    
+                    Lecture 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="Lecture 3.html">
+            
+                <a href="Lecture 3.html">
+            
+                    
+                    Lecture 3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="Lecture 4.html">
+            
+                <a href="Lecture 4.html">
+            
+                    
+                    Lecture 4
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Lecture 2</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="lecture-2">Lecture 2</h1>
+<p>This lecture taught by of <a href="https://www.gla.ac.uk/schools/business/staff/cathyyi-hsuanchen/" target="_blank">Prof. Cathy Yi-Hsuan Chen</a>
+focuses on introducing importing packages, reading and writing files, using pandas to read and write structured data.</p>
+<p>Specifically, the code can be found in the <a href="https://github.com/QuantLet/DEDA_Class_2017" target="_blank">Github</a> </p>
+<h2 id="outlines">Outlines</h2>
+<ul>
+<li><a href="#headers">Pandas</a><ul>
+<li><a href="#quotes">Series</a></li>
+<li><a href="#emphasis">Data Frame</a></li>
+</ul>
+</li>
+<li><a href="#horizontal-rule">Data Input/output</a><ul>
+<li><a href="#lists">Reading and output text files</a></li>
+<li><a href="">OS module</a></li>
+</ul>
+</li>
+<li><a href="#additional-resources">Additional Resources</a></li>
+</ul>
+<hr>
+<h2 id="pandas">Pandas</h2>
+<ul>
+<li>Pandas contains high-level data structures and manipulation tools designed to make data analysis fast and easy in Python</li>
+<li>It provides two workhorse data structures: <strong>Series</strong> and <strong>DataFrame</strong>. </li>
+</ul>
+<h3 id="series">Series</h3>
+<ul>
+<li>Series is a one-dimensional array-like object containing an array of data (of any NumPy data type) and an associated array of data labels, called its index. </li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd
+Series1 = pd.Series([<span class="hljs-number">4</span>, <span class="hljs-number">7</span>, <span class="hljs-number">-5</span>, <span class="hljs-number">3</span>], index=[<span class="hljs-string">&apos;d&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>])
+</code></pre>
+<ul>
+<li>You can create a series from a dictionary object</li>
+</ul>
+<pre><code class="lang-python">sdata = {<span class="hljs-string">&apos;Ohio&apos;</span>: <span class="hljs-number">35000</span>, <span class="hljs-string">&apos;Texas&apos;</span>: <span class="hljs-number">71000</span>, <span class="hljs-string">&apos;Oregon&apos;</span>: <span class="hljs-number">16000</span>, <span class="hljs-string">&apos;Utah&apos;</span>: <span class="hljs-number">5000</span>}
+Series3 = pd.Series(sdata)
+</code></pre>
+<h3 id="data-frame">Data Frame</h3>
+<ul>
+<li>DataFrame represents a tabular, spreadsheet-like data structure containing an or- dered collection of columns, each of which can be a different value type (numeric, string, boolean, etc.)</li>
+<li>DataFrame has both a row and column index; it can be thought of as a dict of Series (one for all sharing the same index).</li>
+<li>There are numerous ways to construct a DataFrame</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-comment"># Way 1: a dict of equal-length lists or NumPy arrays</span>
+data = {<span class="hljs-string">&apos;state&apos;</span>: [<span class="hljs-string">&apos;Ohio&apos;</span>, <span class="hljs-string">&apos;Ohio&apos;</span>, <span class="hljs-string">&apos;Ohio&apos;</span>, <span class="hljs-string">&apos;Nevada&apos;</span>, <span class="hljs-string">&apos;Nevada&apos;</span>], <span class="hljs-string">&apos;year&apos;</span>: [<span class="hljs-number">2000</span>, <span class="hljs-number">2001</span>, <span class="hljs-number">2002</span>, <span class="hljs-number">2001</span>, <span class="hljs-number">2002</span>],
+<span class="hljs-string">&apos;pop&apos;</span>: [<span class="hljs-number">1.5</span>, <span class="hljs-number">1.7</span>, <span class="hljs-number">3.6</span>, <span class="hljs-number">2.4</span>, <span class="hljs-number">2.9</span>]}
+
+frame1 = pd.DataFrame(data)
+
+<span class="hljs-comment"># you can order the columns</span>
+frame2 = pd.DataFrame(data, columns=[<span class="hljs-string">&apos;year&apos;</span>, <span class="hljs-string">&apos;state&apos;</span>, <span class="hljs-string">&apos;pop&apos;</span>])
+</code></pre>
+<pre><code class="lang-python"><span class="hljs-comment"># Way 2: a nested dict of dicts format</span>
+data = {<span class="hljs-string">&apos;Nevada&apos;</span>: {<span class="hljs-number">2001</span>: <span class="hljs-number">2.4</span>, <span class="hljs-number">2002</span>: <span class="hljs-number">2.9</span>}, <span class="hljs-string">&apos;Ohio&apos;</span>: {<span class="hljs-number">2000</span>: <span class="hljs-number">1.5</span>, <span class="hljs-number">2001</span>: <span class="hljs-number">1.7</span>, <span class="hljs-number">2002</span>: <span class="hljs-number">3.6</span>}}
+
+frame3 =pd.DataFrame(data)
+</code></pre>
+<ul>
+<li>generate date sereis</li>
+</ul>
+<pre><code class="lang-python">dates = pd.date_range(<span class="hljs-string">&apos;1/1/2020&apos;</span>, periods=<span class="hljs-number">10</span>)
+df = pd.DataFrame(np.random.randn(<span class="hljs-number">10</span>, <span class="hljs-number">5</span>),index=dates, columns=[<span class="hljs-string">&apos;A&apos;</span>, <span class="hljs-string">&apos;B&apos;</span>, <span class="hljs-string">&apos;C&apos;</span>, <span class="hljs-string">&apos;D&apos;</span>,<span class="hljs-string">&apos;E&apos;</span>])
+</code></pre>
+<ul>
+<li>Indexing, selection, and filtering in DataFrame</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np  <span class="hljs-comment"># numpy is fundamental package for scientific computing</span>
+data = pd.DataFrame(np.random.randn(<span class="hljs-number">4</span>, <span class="hljs-number">4</span>),
+index=[<span class="hljs-string">&apos;Ohio&apos;</span>, <span class="hljs-string">&apos;Colorado&apos;</span>, <span class="hljs-string">&apos;Utah&apos;</span>, <span class="hljs-string">&apos;New York&apos;</span>],
+columns=[<span class="hljs-string">&apos;one&apos;</span>, <span class="hljs-string">&apos;two&apos;</span>, <span class="hljs-string">&apos;three&apos;</span>, <span class="hljs-string">&apos;four&apos;</span>])
+
+<span class="hljs-comment"># please implementing the following selection</span>
+data[<span class="hljs-string">&apos;two&apos;</span>]
+
+data[<span class="hljs-string">&apos;two&apos;</span>][<span class="hljs-number">0</span>]
+
+data[[<span class="hljs-string">&apos;three&apos;</span>, <span class="hljs-string">&apos;one&apos;</span>]]
+
+data[:<span class="hljs-number">2</span>]
+
+data[<span class="hljs-number">2</span>:]
+
+data[data[<span class="hljs-string">&apos;three&apos;</span>] &gt; <span class="hljs-number">0.1</span>]
+
+<span class="hljs-comment"># please implementing the following filtering</span>
+data[data &lt; <span class="hljs-number">0.1</span>] = <span class="hljs-number">0</span>
+
+data.ix[<span class="hljs-string">&apos;Colorado&apos;</span>, [<span class="hljs-string">&apos;two&apos;</span>, <span class="hljs-string">&apos;three&apos;</span>]]
+
+data.ix[[<span class="hljs-string">&apos;Colorado&apos;</span>, <span class="hljs-string">&apos;Utah&apos;</span>], [<span class="hljs-number">3</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>]]
+
+data.ix[data.three &gt; <span class="hljs-number">0.1</span>, :<span class="hljs-number">3</span>]
+
+<span class="hljs-comment"># loc: Access a group of rows and columns by label(s) or a boolean array.</span>
+data.loc[<span class="hljs-string">&apos;Ohio&apos;</span>]
+
+<span class="hljs-comment"># Single label for row and column</span>
+data.loc[<span class="hljs-string">&apos;Ohio&apos;</span>,<span class="hljs-string">&apos;three&apos;</span>]
+
+<span class="hljs-comment"># iloc: Purely integer-location based indexing for selection by position</span>
+data.iloc[<span class="hljs-number">0</span>]
+</code></pre>
+<ul>
+<li>you can drop NA from Dataframe: dropna()</li>
+<li>you can fill NA as 0: fillna(0)</li>
+</ul>
+<h1 id="data-inputoutput">Data Input/Output</h1>
+<h2 id="reading-and-output-text-files">Reading and output text files</h2>
+<p>When processing very large files or figuring out the right set of arguments to correctly process a large file, you may only want to read in a small piece of a file or iterate through smaller chunks of the file.</p>
+<p>using stock of AAPL as an exmaple, find <a href="https://github.com/chencath/DataRetrival/blob/master/AAPL.csv" target="_blank">data here</a>, and save it into your working directory</p>
+<pre><code class="lang-python">apple_stock = pd.read_csv(<span class="hljs-string">&apos;AAPL.csv&apos;</span>, index_col=<span class="hljs-string">&apos;date&apos;</span>, parse_dates=<span class="hljs-keyword">True</span>)
+<span class="hljs-comment"># slicing</span>
+apple_stock_2013 = apple_stock.loc[apple_stock.index.year == <span class="hljs-number">2013</span>, [<span class="hljs-string">&apos;low&apos;</span>, <span class="hljs-string">&apos;high&apos;</span>, <span class="hljs-string">&apos;open&apos;</span>, <span class="hljs-string">&apos;close&apos;</span>, <span class="hljs-string">&apos;volume&apos;</span>]]
+<span class="hljs-comment"># sorting </span>
+apple_stock_2013.sort_values(by=<span class="hljs-string">&apos;volume&apos;</span>, ascending=<span class="hljs-keyword">False</span>, inplace=<span class="hljs-keyword">True</span>)
+
+<span class="hljs-comment"># Save the new data as json or csv format</span>
+apple_stock_2013.to_json(<span class="hljs-string">&apos;AAPL_2013.json&apos;</span>)
+apple_stock_2013.to_csv(<span class="hljs-string">&apos;test.csv&apos;</span>)
+</code></pre>
+<h2 id="os-module">OS module</h2>
+<p>The OS module in Python provides a way of using operating system dependent
+functionality</p>
+<p>using corpus of shakespeare as an exmaple, find <a href="https://github.com/chencath/DataRetrival/blob/master/shakespeare.txt" target="_blank">text here</a>, and save it into your working directory</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> os
+
+path_direct = os.getcwd()
+os.chdir(path_direct + <span class="hljs-string">&apos;/course&apos;</span>)
+
+<span class="hljs-comment"># Using build-in function, open(), to open the file and using close() to close the file</span>
+shakespeare = open(<span class="hljs-string">&apos;shakespeare.txt&apos;</span>, <span class="hljs-string">&apos;r&apos;</span>, encoding=<span class="hljs-string">&apos;utf-8&apos;</span>)
+<span class="hljs-keyword">for</span> string <span class="hljs-keyword">in</span> shakespeare:
+    print(string)
+shakespeare.close()
+</code></pre>
+<ul>
+<li>Way 1: read strings</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-keyword">with</span> open(<span class="hljs-string">&apos;shakespeare.txt&apos;</span>, <span class="hljs-string">&apos;r&apos;</span>) <span class="hljs-keyword">as</span> shakespeare_read:
+    <span class="hljs-comment"># read(n) method will put n characters into a string</span>
+    shakespeare_string_10 = shakespeare_read.read(<span class="hljs-number">10</span>)
+    shakespeare_string = shakespeare_read.read()
+</code></pre>
+<ul>
+<li>Way 2: read single line</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-keyword">with</span> open(<span class="hljs-string">&apos;shakespeare.txt&apos;</span>, <span class="hljs-string">&apos;r&apos;</span>) <span class="hljs-keyword">as</span> shakespeare_read:
+    <span class="hljs-comment"># readline() method will read one line once.</span>
+    print(shakespeare_read.readline(), end=<span class="hljs-string">&apos;*&apos;</span>)
+    print(shakespeare_read.readline(), end=<span class="hljs-string">&apos;*&apos;</span>)
+    print(shakespeare_read.readline(), end=<span class="hljs-string">&apos;*&apos;</span>)
+</code></pre>
+<ul>
+<li>Way 3: read multiple lines, and create a list of strings</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-keyword">with</span> open(<span class="hljs-string">&apos;shakespeare.txt&apos;</span>, <span class="hljs-string">&apos;r&apos;</span>) <span class="hljs-keyword">as</span> shakespeare_read:
+    <span class="hljs-comment"># readlines() method will put content into a list, every line is a string in the list</span>
+    shakespeare_lines = shakespeare_read.readlines()
+    print(shakespeare_lines)
+</code></pre>
+<h2 id="additional-resources">Additional Resources</h2>
+<ul>
+<li><a href="https://www.w3schools.com/python/default.asp" target="_blank">W3schools</a></li>
+<li><a href="https://repl.it/" target="_blank">Online Python Interpreter</a></li>
+<li><a href="https://pandas.pydata.org/pandas-docs/stable/reference/general_functions.html" target="_blank">Pandas document</a></li>
+<li><a href="http://quantlet.de/" target="_blank">Quantlet</a></li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Lecture 1.html" class="navigation navigation-prev " aria-label="Previous page: Lecture 1">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Lecture 3.html" class="navigation navigation-next " aria-label="Next page: Lecture 3">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Lecture 2","level":"1.3","depth":1,"next":{"title":"Lecture 3","level":"1.4","depth":1,"path":"Lecture 3.md","ref":"Lecture 3.md","articles":[]},"previous":{"title":"Lecture 1","level":"1.2","depth":1,"path":"Lecture 1.md","ref":"Lecture 1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Lecture 2.md","mtime":"2020-03-03T22:05:31.693Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-12T23:06:44.317Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

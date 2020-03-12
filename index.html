@@ -1,0 +1,751 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Introduction · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Lecture 1.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter active" data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="Lecture 1.html">
+            
+                <a href="Lecture 1.html">
+            
+                    
+                    Lecture 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="Lecture 2.html">
+            
+                <a href="Lecture 2.html">
+            
+                    
+                    Lecture 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="Lecture 3.html">
+            
+                <a href="Lecture 3.html">
+            
+                    
+                    Lecture 3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="Lecture 4.html">
+            
+                <a href="Lecture 4.html">
+            
+                    
+                    Lecture 4
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Introduction</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="lecture-4">Lecture 4</h1>
+<p>This lecture taught by of <a href="https://www.gla.ac.uk/schools/business/staff/cathyyi-hsuanchen/" target="_blank">Prof. Cathy Yi-Hsuan Chen</a>
+focuses on testing API accessibility via Postman. We demonstrate three cases of API retrieval. </p>
+<p>Specifically, the code can be found in the <a href="https://github.com/chencath/DataRetrieval" target="_blank">Github</a> </p>
+<p>Here is <a href="https://www.guru99.com/postman-tutorial.html" target="_blank">Postman Tutorial</a> where it guides you the interface of Postman</p>
+<h2 id="outlines">Outlines</h2>
+<ul>
+<li><a href="#headers">API</a><ul>
+<li><a href="#quotes">Web API</a></li>
+<li><a href="#emphasis">Postman API</a></li>
+</ul>
+</li>
+<li><a href="#horizontal-rule">API examples</a><ul>
+<li><a href="#lists">News API</a></li>
+<li><a href="">StockTwits API</a></li>
+<li><a href="">NASA API</a></li>
+</ul>
+</li>
+<li><a href="#additional-resources">Additional Resources</a></li>
+</ul>
+<hr>
+<h2 id="what-is-api-">What is API ?</h2>
+<ul>
+<li>An application programming interface (API) is an interface or communication protocol between different parts of a computer program intended to simplify the implementation and maintenance of software.</li>
+<li>API has been often used to refer to a specific kind of interface between a client and a server</li>
+<li><em>Web API</em> : client makes a request in a specific format, it will always get a response in a specific format or initiate a defined action from a server</li>
+<li>Here is a short video for API [YouTube] (<a href="https://www.youtube.com/watch?v=s7wmiS2mSXY" target="_blank">https://www.youtube.com/watch?v=s7wmiS2mSXY</a>)</li>
+</ul>
+<h3 id="web-api">Web API</h3>
+<ul>
+<li>API is typically defined as a set of specifications, such as Hypertext Transfer Protocol (HTTP) request messages, along with a definition of the structure of response messages, usually in an Extensible Markup Language (XML) or JavaScript Object Notation (JSON) format</li>
+<li>In the social media space, web APIs have allowed web communities to facilitate sharing content and data between communities and applications.</li>
+</ul>
+<h3 id="postman-api">Postman API</h3>
+<ul>
+<li>The <a href="https://docs.api.getpostman.com/?version=latest" target="_blank">Postman</a> API allows you to programmatically access data stored in Postman account with ease</li>
+<li>You need a valid API Key to send requests to the API endpoints</li>
+<li>The API has an access rate limit applied to it</li>
+<li>Response to every request is sent in <strong>JSON</strong> format</li>
+<li>The request method (verb) determines the nature of action you intend to perform. A request made using the <strong>GET</strong> method implies that you want to fetch something from Postman, and <strong>POST</strong> implies you want to save something new to Postman</li>
+</ul>
+<h1 id="api-examples">API examples</h1>
+<h2 id="news-api">News API</h2>
+<p>News API is great as a data source for news tickers and other applications where you want to show your users live headlines. News API tracks headlines in 7 categories across over 50 countries, and at over a hundred top publications and blogs, in near real time</p>
+<ul>
+<li><p>Read <strong>Term of USE</strong> before doing it!  <a href="https://newsapi.org/terms" target="_blank">Term</a></p>
+</li>
+<li><p>Top headlines: provides live top and breaking headlines for a country, specific category in a country, single source, or multiple sources. You can also search with keywords. Articles are sorted by the earliest date published first.</p>
+</li>
+</ul>
+<blockquote>
+<ul>
+<li>Request parameters: country; category; source; pagesize; page; apiKey</li>
+<li>Response: status; totalResutls; articles; sources; authors; title; description; url; content...</li>
+</ul>
+</blockquote>
+<pre><code class="lang-python">QueryParams={<span class="hljs-string">&apos;country&apos;</span>:<span class="hljs-string">&apos;us&apos;</span>, <span class="hljs-string">&apos;apiKey&apos;</span>:API_KEY}
+</code></pre>
+<ul>
+<li>Define a class for NewsAPI </li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> requests
+<span class="hljs-keyword">import</span> json
+<span class="hljs-keyword">from</span> enum <span class="hljs-keyword">import</span> Enum
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">NewsApi</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;Class for accessing News API functions.
+
+  Methods:
+    GetResource  -- get the resources of news.
+    GetHeadlines -- Download top headlines of specific country.
+    GetEverything -- Download top headlines of specific country.
+
+  For more detail on News API, see the documentation at
+  https://newsapi.org/
+  &quot;&quot;&quot;</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, key: str)</span>:</span>
+
+        self.baseUri = <span class="hljs-string">&quot;https://newsapi.org/v2/&quot;</span>
+        self.api_key = key
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">GetSources</span><span class="hljs-params">(self, category = <span class="hljs-string">&apos;business&apos;</span>, country = <span class="hljs-string">&apos;us&apos;</span>)</span>:</span>
+        <span class="hljs-string">&quot;&quot;&quot;Download categories for detailed retrieval information.
+    &quot;&quot;&quot;</span>
+        fullUri = self.baseUri + <span class="hljs-string">&quot;sources&quot;</span>
+        getParams = {<span class="hljs-string">&apos;country&apos;</span>: country, <span class="hljs-string">&quot;category&quot;</span>: category }
+        getParams[<span class="hljs-string">&apos;apiKey&apos;</span>] = self.api_key
+        <span class="hljs-keyword">try</span>:
+            result = requests.get(fullUri, params=getParams)
+        <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:
+            print(<span class="hljs-string">&quot;HTTP Request fail {}\r\n{}&quot;</span>.format(fullUri, e))
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">None</span>
+        <span class="hljs-keyword">return</span> json.loads(result.content)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">GetHeadlines</span><span class="hljs-params">(self, country = <span class="hljs-string">&apos;us&apos;</span>)</span>:</span>
+        <span class="hljs-string">&quot;&quot;&quot;Download top headlines of specific country.
+    &quot;&quot;&quot;</span>
+        fullUri = self.baseUri + <span class="hljs-string">&quot;top-headlines&quot;</span>
+        getParams = {<span class="hljs-string">&apos;country&apos;</span>: country }
+        getParams[<span class="hljs-string">&apos;apiKey&apos;</span>] = self.api_key
+
+        <span class="hljs-keyword">try</span>:
+            result = requests.get(fullUri, params=getParams)
+        <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:
+            print(<span class="hljs-string">&quot;HTTP Request fail {}\r\n{}&quot;</span>.format(fullUri, e))
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">None</span>
+        <span class="hljs-keyword">return</span> json.loads(result.content)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">GetEverything</span><span class="hljs-params">(self, symbol)</span>:</span>
+        <span class="hljs-string">&quot;&quot;&quot;Download top headlines of specific country.
+    &quot;&quot;&quot;</span>
+        fullUri = self.baseUri + <span class="hljs-string">&quot;everything&quot;</span>
+        getParams = {<span class="hljs-string">&apos;q&apos;</span>: symbol }
+        getParams[<span class="hljs-string">&apos;apiKey&apos;</span>] = self.api_key
+
+        <span class="hljs-keyword">try</span>:
+            result = requests.get(fullUri, params=getParams)
+        <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:
+            print(<span class="hljs-string">&quot;HTTP Request fail {}\r\n{}&quot;</span>.format(fullUri, e))
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">None</span>
+        <span class="hljs-keyword">return</span> json.loads(result.content)
+</code></pre>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> NewsAPI <span class="hljs-keyword">import</span> NewsApi    <span class="hljs-comment"># create module NewsAPI for object class &quot;NewsApi&quot;</span>
+<span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd
+<span class="hljs-keyword">import</span> os
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">CreateDF</span><span class="hljs-params">(JsonArray,columns)</span>:</span>
+    dfData = pd.DataFrame()
+
+    <span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> JsonArray:
+        itemStruct = {}
+
+        <span class="hljs-keyword">for</span> cunColumn <span class="hljs-keyword">in</span> columns:
+            itemStruct[cunColumn] = item[cunColumn]
+
+        dfData = dfData.append(itemStruct,ignore_index=<span class="hljs-keyword">True</span>)
+            <span class="hljs-comment"># dfData = dfData.append({&apos;id&apos;: item[&apos;id&apos;], &apos;name&apos;: item[&apos;name&apos;], &apos;description&apos;: item[&apos;description&apos;]},</span>
+            <span class="hljs-comment">#                        ignore_index=True)</span>
+
+    <span class="hljs-keyword">return</span> dfData
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-comment"># access_token_NewsAPI.txt must contain your personal access token</span>
+    <span class="hljs-keyword">with</span> open(<span class="hljs-string">&quot;access_token_NewsAPI.txt&quot;</span>, <span class="hljs-string">&quot;r&quot;</span>) <span class="hljs-keyword">as</span> f:
+        myKey = f.read()[:<span class="hljs-number">-1</span>]
+
+    api = NewsApi(myKey)
+
+    <span class="hljs-comment"># get sources of news</span>
+    columns = [<span class="hljs-string">&apos;id&apos;</span>, <span class="hljs-string">&apos;name&apos;</span>, <span class="hljs-string">&apos;description&apos;</span>]
+    rst_source = api.GetSources()
+    df = CreateDF(rst_source[<span class="hljs-string">&apos;sources&apos;</span>], columns)
+    df.to_csv(<span class="hljs-string">&apos;source_list.csv&apos;</span>)
+
+
+    <span class="hljs-comment"># get news for specific country</span>
+    rst_country = api.GetHeadlines()
+    columns = [ <span class="hljs-string">&apos;author&apos;</span>, <span class="hljs-string">&apos;publishedAt&apos;</span>, <span class="hljs-string">&apos;title&apos;</span>, <span class="hljs-string">&apos;description&apos;</span>,<span class="hljs-string">&apos;content&apos;</span>, <span class="hljs-string">&apos;url&apos;</span>]
+    df = CreateDF(rst_country[<span class="hljs-string">&apos;articles&apos;</span>], columns)
+    df.to_csv(<span class="hljs-string">&apos;Headlines_country.csv&apos;</span>)
+
+    <span class="hljs-comment"># get  news for specific symbol</span>
+    symbol = <span class="hljs-string">&apos;aapl&apos;</span>
+    rst_symbol =api.GetEverything(symbol)
+    columns = [<span class="hljs-string">&apos;author&apos;</span>, <span class="hljs-string">&apos;publishedAt&apos;</span>, <span class="hljs-string">&apos;title&apos;</span>, <span class="hljs-string">&apos;description&apos;</span>, <span class="hljs-string">&apos;content&apos;</span>, <span class="hljs-string">&apos;url&apos;</span>]
+    df = CreateDF(rst_symbol[<span class="hljs-string">&apos;articles&apos;</span>], columns)
+    df.to_csv(<span class="hljs-string">&apos;Headlines_symbol.csv&apos;</span>)
+
+
+main()
+</code></pre>
+<p><img src="https://makeawebsitehub.com/wp-content/uploads/2016/04/social_media.jpg" alt="James Quick"> </p>
+<h2 id="stocktwits">StockTwits</h2>
+<ul>
+<li><p>Find list of symbol used by stocktwits <a href="https://api.stocktwits.com/symbol-sync/symbols.csv" target="_blank">here</a></p>
+</li>
+<li><p>The Web API provided by StockTwits <a href="https://api.stocktwits.com/developers/docs" target="_blank">doc</a>. Please read <a href="https://api.stocktwits.com/developers/api-terms" target="_blank">API terms and conditions</a></p>
+</li>
+<li><p>The Stocktwits API only allows clients to make a limited number of calls in a given hour. This policy affects the APIs in different ways. <a href="https://api.stocktwits.com/developers/docs/rate_limiting" target="_blank">API rate limiting</a></p>
+</li>
+<li><p>Search for symbols or users</p>
+<ul>
+<li>Get message streams in the form of JSON</li>
+<li>NLP for messages</li>
+<li>Create timeline (dataframe)</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> importlib
+<span class="hljs-keyword">import</span> StockTwitsAPI
+importlib.reload(StockTwitsAPI)
+<span class="hljs-keyword">import</span> json
+<span class="hljs-keyword">import</span> datetime <span class="hljs-keyword">as</span> dt
+<span class="hljs-keyword">import</span> time
+<span class="hljs-keyword">from</span> StockTwitsAPI <span class="hljs-keyword">import</span> StockTwitsApi    <span class="hljs-comment"># create module NewsAPI for object class &quot;NewsApi&quot;</span>
+<span class="hljs-keyword">import</span> preprocessing <span class="hljs-keyword">as</span> pre             <span class="hljs-comment"># create preprocessing class for NLP</span>
+importlib.reload(pre)
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">collect</span><span class="hljs-params">(symbol, access_token)</span>:</span>
+    api = StockTwitsApi(access_token)
+    stream = api.stream_symbol(symbol).json()
+    status = stream[<span class="hljs-string">&quot;response&quot;</span>][<span class="hljs-string">&quot;status&quot;</span>]
+    <span class="hljs-keyword">with</span> open(<span class="hljs-string">&quot;stream{}.json&quot;</span>.format(symbol), <span class="hljs-string">&quot;w&quot;</span>, encoding=<span class="hljs-string">&quot;utf-8&quot;</span>) <span class="hljs-keyword">as</span> f:
+        json.dump(stream, f)
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>:</span>
+
+    <span class="hljs-keyword">with</span> open(<span class="hljs-string">&quot;access_token_stockTwits.txt&quot;</span>, <span class="hljs-string">&quot;r&quot;</span>) <span class="hljs-keyword">as</span> f:
+        access_token = f.read()[:<span class="hljs-number">-1</span>]
+    start = dt.datetime.now()
+    Symbol=<span class="hljs-string">&apos;IBB&apos;</span>      <span class="hljs-comment"># symbol of interest, can be a list of symbols</span>
+    collect(symbol=Symbol, access_token=access_token)   <span class="hljs-comment"># single request</span>
+    print(<span class="hljs-string">&quot;Making timeline...&quot;</span>)
+    pre.make_timeline(symbol=Symbol)
+
+main()
+</code></pre>
+<ul>
+<li>Create a class for NLP (Natural Language Processing) task including removing puntucation, stop words. Add &quot;negtag_&quot; to all words following one of NEGWORDS</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> string <span class="hljs-keyword">import</span> punctuation
+<span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
+<span class="hljs-keyword">from</span> numpy.random <span class="hljs-keyword">import</span> binomial
+<span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd
+<span class="hljs-keyword">import</span> json
+
+PUNCTUATION = list(punctuation.replace(<span class="hljs-string">&quot;?&quot;</span>, <span class="hljs-string">&quot;&quot;</span>).replace(<span class="hljs-string">&quot;!&quot;</span>, <span class="hljs-string">&quot;&quot;</span>))
+STOPWORDS = [<span class="hljs-string">&quot;an&quot;</span>, <span class="hljs-string">&quot;a&quot;</span>, <span class="hljs-string">&quot;the&quot;</span>] + NEGWORDS
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">read_stream</span><span class="hljs-params">(symbol)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;Return the stream of messages in database related to cur.
+
+      cur must be a dictionary with at least keys &quot;title&quot; and &quot;symbol&quot;.
+    An empty list is returned if the corresponding JSON file doesn&apos;t exist yet.
+      &quot;&quot;&quot;</span>
+    <span class="hljs-keyword">try</span>:
+        <span class="hljs-keyword">with</span> open(<span class="hljs-string">&quot;stream{}.json&quot;</span>.format(symbol), <span class="hljs-string">&quot;r&quot;</span>, encoding=<span class="hljs-string">&quot;utf-8&quot;</span>) <span class="hljs-keyword">as</span> f:
+            stream = json.load(f)
+        <span class="hljs-keyword">return</span> (stream)
+    <span class="hljs-keyword">except</span> FileNotFoundError:
+        print(<span class="hljs-string">&quot;Stream not found for {} ({}).&quot;</span>.format([<span class="hljs-string">&quot;title&quot;</span>],[<span class="hljs-string">&quot;symbol&quot;</span>]))
+        <span class="hljs-keyword">return</span> ([])
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">make_timeline</span><span class="hljs-params">(symbol, path=<span class="hljs-string">&quot;timeline.csv&quot;</span>)</span>:</span>
+  <span class="hljs-string">&quot;&quot;&quot;Create and save timeline to disk.
+
+  The timeline is the time-ordered list of all messages in database without
+  redundancies.
+  It is saved as a CSV file with columns:
+    id -- the unique id of the message
+    created_at -- time at which was posted the message
+    body -- the actual text of the message
+    user -- the unique id of the author
+    username -- the username of the author at the time he/she posted the message
+    declared_sentiment -- 1 if the message was declared &quot;Bullish&quot; by the author,
+                          -1 if it was declared &quot;Bearish&quot;,
+                          None (or empty field) otherwise
+  &quot;&quot;&quot;</span>
+  messages = []
+  n = <span class="hljs-number">0</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">extract_infos</span><span class="hljs-params">(message)</span>:</span>
+    <span class="hljs-keyword">return</span>(message[<span class="hljs-string">&quot;id&quot;</span>], {
+                           <span class="hljs-string">&quot;created_at&quot;</span>: message[<span class="hljs-string">&quot;created_at&quot;</span>],
+                           <span class="hljs-string">&quot;body&quot;</span>: preprocess(message),
+                           <span class="hljs-string">&quot;user&quot;</span>: message[<span class="hljs-string">&quot;user&quot;</span>][<span class="hljs-string">&quot;id&quot;</span>],
+                           <span class="hljs-string">&quot;username&quot;</span>: message[<span class="hljs-string">&quot;user&quot;</span>][<span class="hljs-string">&quot;username&quot;</span>],
+                           <span class="hljs-string">&quot;declared_sentiment&quot;</span>: _declared_sentiment(message)
+                           })
+
+  messages.extend([extract_infos(m) <span class="hljs-keyword">for</span> m <span class="hljs-keyword">in</span> read_stream(symbol)[<span class="hljs-string">&apos;messages&apos;</span>]])
+  print(<span class="hljs-string">&quot; &quot;</span>*(<span class="hljs-number">40</span> + n),<span class="hljs-string">&quot;\rLoading and preprocessing...&quot;</span>)
+  print(<span class="hljs-string">&quot;Creating timeline...&quot;</span>)
+  dic = {id: infos <span class="hljs-keyword">for</span> id, infos <span class="hljs-keyword">in</span> messages}
+  df = pd.DataFrame.from_dict(dic, orient=<span class="hljs-string">&apos;index&apos;</span>)
+  df[<span class="hljs-string">&quot;set&quot;</span>] = np.array([<span class="hljs-string">&quot;training&quot;</span>, <span class="hljs-string">&quot;testing&quot;</span>])[binomial(<span class="hljs-number">1</span>, <span class="hljs-number">0.25</span>, size=len(df))]
+  df.index.name = <span class="hljs-string">&quot;id&quot;</span>
+  print(<span class="hljs-string">&quot;Writing to disk...&quot;</span>)
+  df.to_csv(path)
+  print(<span class="hljs-string">&quot;Done.&quot;</span>)
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">preprocess</span><span class="hljs-params">(m)</span>:</span>
+  <span class="hljs-string">&quot;&quot;&quot;Preprocess messages and return the corresponding strings.
+
+  message must be a dict with at least keys &quot;body&quot; and &quot;symbol&quot;, or a string.
+  &quot;&quot;&quot;</span>
+  txt = _replace_symbols_users_links(m)
+  txt = _remove_null_bytes(txt)
+  txt = txt.lower()
+  txt = txt.replace(<span class="hljs-string">&quot;\n&quot;</span>, <span class="hljs-string">&quot; &quot;</span>)
+  txt = txt.replace(<span class="hljs-string">&quot;\r&quot;</span>, <span class="hljs-string">&quot; &quot;</span>)
+  txt = _change_tags(txt, <span class="hljs-string">&quot;$&quot;</span>, <span class="hljs-string">&quot;moneytag&quot;</span>)
+  txt = _change_tags(txt, <span class="hljs-string">&quot;&#x20AC;&quot;</span>, <span class="hljs-string">&quot;moneytag&quot;</span>)
+  txt = _remove_punctuation(txt)
+  txt = _numbertags(txt)
+  txt = _contract_spaces(txt)
+  txt = _remove_stopwords(txt)
+  <span class="hljs-keyword">if</span> txt.startswith(<span class="hljs-string">&quot; &quot;</span>):
+    txt = txt[<span class="hljs-number">1</span>:]
+  <span class="hljs-keyword">return</span>(txt)
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_remove_null_bytes</span><span class="hljs-params">(txt)</span>:</span>
+  <span class="hljs-keyword">return</span>(txt.replace(<span class="hljs-string">&quot;\0&quot;</span>, <span class="hljs-string">&quot;&quot;</span>))
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_remove_stopwords</span><span class="hljs-params">(txt)</span>:</span>
+  <span class="hljs-string">&quot;&quot;&quot;Delete from txt all words contained in STOPWORDS.&quot;&quot;&quot;</span>
+  words = txt.split(<span class="hljs-string">&quot; &quot;</span>)
+  <span class="hljs-keyword">for</span> i, word <span class="hljs-keyword">in</span> enumerate(words):
+    <span class="hljs-keyword">if</span> word <span class="hljs-keyword">in</span> STOPWORDS:
+      words[i] = <span class="hljs-string">&quot;&quot;</span>
+  <span class="hljs-keyword">return</span>(txt)
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_contract_spaces</span><span class="hljs-params">(txt)</span>:</span>
+  <span class="hljs-string">&quot;&quot;&quot;Contract all repetitions of spaces to one space.&quot;&quot;&quot;</span>
+  <span class="hljs-keyword">while</span> <span class="hljs-string">&quot;  &quot;</span> <span class="hljs-keyword">in</span> txt:
+    txt = txt.replace(<span class="hljs-string">&quot;  &quot;</span>, <span class="hljs-string">&quot; &quot;</span>)
+  <span class="hljs-keyword">return</span>(txt)
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_replace_symbols_users_links</span><span class="hljs-params">(m)</span>:</span>
+  <span class="hljs-keyword">if</span> type(m) <span class="hljs-keyword">is</span> str:
+    <span class="hljs-comment"># SHOULD REPLACE SYMBOLS, USERS AND LINKS FOR RAW TEXT</span>
+    <span class="hljs-keyword">return</span>(m)
+  <span class="hljs-keyword">else</span>:
+    txt = m[<span class="hljs-string">&quot;body&quot;</span>]
+    <span class="hljs-comment">#symbols</span>
+    <span class="hljs-keyword">for</span> s <span class="hljs-keyword">in</span> m[<span class="hljs-string">&quot;symbols&quot;</span>]:
+      txt = txt.replace(<span class="hljs-string">&quot;$&quot;</span> + s[<span class="hljs-string">&quot;symbol&quot;</span>], <span class="hljs-string">&quot;cashtag&quot;</span>)
+      <span class="hljs-keyword">if</span> <span class="hljs-string">&quot;aliases&quot;</span> <span class="hljs-keyword">in</span> s:
+        <span class="hljs-keyword">for</span> alias <span class="hljs-keyword">in</span> s[<span class="hljs-string">&quot;aliases&quot;</span>]:
+          txt = txt.replace(<span class="hljs-string">&quot;$&quot;</span> + alias, <span class="hljs-string">&quot;cashtag&quot;</span>)
+    <span class="hljs-comment">#users</span>
+    <span class="hljs-keyword">if</span> <span class="hljs-string">&quot;mentioned_users&quot;</span> <span class="hljs-keyword">in</span> m:
+      <span class="hljs-keyword">for</span> u <span class="hljs-keyword">in</span> m[<span class="hljs-string">&quot;mentioned_users&quot;</span>]:
+        txt = txt.replace(u,  <span class="hljs-string">&quot;usertag&quot;</span>)
+    <span class="hljs-comment">#links</span>
+    <span class="hljs-keyword">if</span> <span class="hljs-string">&quot;links&quot;</span> <span class="hljs-keyword">in</span> m:
+      <span class="hljs-keyword">for</span> l <span class="hljs-keyword">in</span> m[<span class="hljs-string">&quot;links&quot;</span>]:
+        txt = txt.replace(l[<span class="hljs-string">&quot;url&quot;</span>], <span class="hljs-string">&quot;linktag&quot;</span>)
+  <span class="hljs-keyword">return</span>(txt)
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_numbertags</span><span class="hljs-params">(txt)</span>:</span>
+  <span class="hljs-string">&quot;&quot;&quot;Replace all numbers by &quot;numbertag&quot;.&quot;&quot;&quot;</span>
+  words = txt.split(<span class="hljs-string">&quot; &quot;</span>)
+  <span class="hljs-keyword">for</span> i, word <span class="hljs-keyword">in</span> enumerate(words):
+    <span class="hljs-keyword">if</span> word.isnumeric():
+      words[i] = <span class="hljs-string">&quot;numbertag&quot;</span>
+  <span class="hljs-keyword">return</span>(<span class="hljs-string">&quot; &quot;</span>.join(words))
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_change_tags</span><span class="hljs-params">(txt, tag, newtag)</span>:</span>
+  <span class="hljs-string">&quot;&quot;&quot;Replace words starting with tag by newtag.&quot;&quot;&quot;</span>
+  words = txt.split(<span class="hljs-string">&quot; &quot;</span>)
+  <span class="hljs-keyword">for</span> i, word <span class="hljs-keyword">in</span> enumerate(words):
+    <span class="hljs-keyword">if</span> word.startswith(tag):
+      words[i] = newtag
+  <span class="hljs-keyword">return</span>(<span class="hljs-string">&quot; &quot;</span>.join(words))
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_remove_punctuation</span><span class="hljs-params">(txt)</span>:</span>
+  characters = list(txt)
+  n = len(characters)
+  insert, offset = [], <span class="hljs-number">0</span>
+  <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(n):
+    <span class="hljs-keyword">if</span> characters[i] <span class="hljs-keyword">in</span> PUNCTUATION:
+      <span class="hljs-keyword">if</span> <span class="hljs-number">0</span> &lt; i &lt; n<span class="hljs-number">-1</span> <span class="hljs-keyword">and</span> <span class="hljs-string">&quot; &quot;</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> [characters[i<span class="hljs-number">-1</span>], characters[i+<span class="hljs-number">1</span>]]:
+        characters[i] = <span class="hljs-string">&quot; &quot;</span>
+      <span class="hljs-keyword">else</span>:
+        characters[i] = <span class="hljs-string">&quot;&quot;</span>
+    <span class="hljs-keyword">if</span> characters[i] <span class="hljs-keyword">in</span> [<span class="hljs-string">&quot;!&quot;</span>, <span class="hljs-string">&quot;?&quot;</span>] <span class="hljs-keyword">and</span> characters[i<span class="hljs-number">-1</span>] != <span class="hljs-string">&quot; &quot;</span>:
+      insert.append((i + offset, <span class="hljs-string">&quot; &quot;</span>))
+      offset += <span class="hljs-number">1</span>
+  <span class="hljs-keyword">for</span> i, c <span class="hljs-keyword">in</span> insert:
+    characters.insert(i, c)
+  <span class="hljs-keyword">return</span>(<span class="hljs-string">&quot;&quot;</span>.join(characters))
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_declared_sentiment</span><span class="hljs-params">(message)</span>:</span>
+  stm = message[<span class="hljs-string">&quot;entities&quot;</span>][<span class="hljs-string">&quot;sentiment&quot;</span>]
+  <span class="hljs-keyword">return</span>(<span class="hljs-number">2</span>*int(stm[<span class="hljs-string">&quot;basic&quot;</span>] == <span class="hljs-string">&quot;Bullish&quot;</span>) - <span class="hljs-number">1</span> <span class="hljs-keyword">if</span> stm <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">None</span> <span class="hljs-keyword">else</span> <span class="hljs-keyword">None</span>)
+</code></pre>
+<p><img src="https://images-assets.nasa.gov/image/S65-34635/S65-34635~medium.jpg" alt="James Quick"></p>
+<h2 id="nasa">NASA</h2>
+<p>NASA API portal. The objective of this site is to make NASA data, including imagery, eminently accessible to application developers. The api.nasa.gov catalog is growing</p>
+<p><img src="https://www.nasa.gov/sites/all/themes/custom/nasatwo/images/nasa-logo.svg" alt="James Quick"></p>
+<ul>
+<li>Get API key <a href="https://api.nasa.gov/#main-content" target="_blank">here</a></li>
+<li><p>Browse APIs <a href="https://api.nasa.gov/" target="_blank">here</a></p>
+</li>
+<li><p>Example: Techport API to make NASA technology project data availabe in a machine-readable format. TechPort - NASA&apos;s resource for collecting and sharing information about NASA-funded technology development. Techport allows the public to discover the technologies NASA is working on every day to explore space, understand the universe, and improve aeronautics. NASA is developing technologies in areas such as propulsion, nanotechnology, robotics, and human health. NASA is committed to making its data available and machine-readable through an Application Programming Interface (API) to better serve its user communities. As such, the NASA TechPort system provides a RESTful web services API to make technology project data available in a machine-readable format. This API can be used to export TechPort data into either an XML or a JSON format, which can then be further processed and analyzed. </p>
+</li>
+</ul>
+<pre><code class="lang-python">*** Define Class
+
+<span class="hljs-keyword">import</span> requests
+<span class="hljs-keyword">import</span> json
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">NasaApi</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;Class for accessing News API functions.
+  For more detail on NASA API, see the documentation at
+  https://api.nasa.gov/
+  &quot;&quot;&quot;</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, key: str)</span>:</span>
+
+        self.baseUri = <span class="hljs-string">&quot;https://api.nasa.gov/techport/api/projects&quot;</span>
+        self.api_key = key
+
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">Get</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-string">&quot;&quot;&quot;Get list of projects &quot;&quot;&quot;</span>
+        fullUri = self.baseUri
+        getParams = {<span class="hljs-string">&apos;api_key&apos;</span>: self.api_key}
+        <span class="hljs-comment"># getParams[&apos;api_key&apos;] = self.api_key</span>
+        <span class="hljs-keyword">try</span>:
+            result = requests.get(fullUri, params=getParams)
+        <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:
+            print(<span class="hljs-string">&quot;HTTP Request fail {}\r\n{}&quot;</span>.format(fullUri, e))
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">None</span>
+        <span class="hljs-keyword">return</span> json.loads(result.content)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">GetProject</span><span class="hljs-params">(self, id)</span>:</span>
+        <span class="hljs-string">&quot;&quot;&quot; Get first N projecs &quot;&quot;&quot;</span>
+        fullUri = self.baseUri + <span class="hljs-string">&quot;/{}.json&quot;</span>.format(id)
+        getParams = {<span class="hljs-string">&apos;api_key&apos;</span>: self.api_key}
+        <span class="hljs-keyword">try</span>:
+            result = requests.get(fullUri, params=getParams)
+        <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:
+            print(<span class="hljs-string">&quot;HTTP Request fail {}\r\n{}&quot;</span>.format(fullUri, e))
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">None</span>
+        <span class="hljs-keyword">return</span> json.loads(result.content)
+</code></pre>
+<ul>
+<li>get the list of NASA projects and retrieve selected projects (use the predefined Nasa class)</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> importlib
+<span class="hljs-keyword">import</span> NasaAPI
+importlib.reload(NasaAPI)
+<span class="hljs-keyword">from</span> NasaAPI <span class="hljs-keyword">import</span> NasaApi
+<span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>:</span>
+
+    <span class="hljs-keyword">with</span> open(<span class="hljs-string">&quot;access_token_Nasa.txt&quot;</span>, <span class="hljs-string">&quot;r&quot;</span>) <span class="hljs-keyword">as</span> f:
+        myKey = f.read()[:<span class="hljs-number">-1</span>]
+
+    api = NasaApi(myKey)
+
+    <span class="hljs-comment"># get list of project</span>
+    Proj_list= api.Get()
+    Proj_DF = pd.DataFrame(Proj_list[<span class="hljs-string">&apos;projects&apos;</span>][<span class="hljs-string">&apos;projects&apos;</span>])
+
+    <span class="hljs-comment"># get detail of specific project</span>
+    selectID= Proj_DF[<span class="hljs-string">&apos;id&apos;</span>][:<span class="hljs-number">10</span>]    <span class="hljs-comment"># select first 10 projects</span>
+    mydata = []
+
+    <span class="hljs-keyword">for</span> i, item <span class="hljs-keyword">in</span> enumerate(selectID):
+        rst= api.GetProject(item)
+        print(<span class="hljs-string">&apos;making dataframe for {}... ({}/{})&apos;</span>.format(item, i, len(selectID)), end=<span class="hljs-string">&quot;\r&quot;</span>)
+        mydata.append({<span class="hljs-string">&apos;id&apos;</span>: item, <span class="hljs-string">&apos;title&apos;</span>: rst[<span class="hljs-string">&apos;project&apos;</span>][<span class="hljs-string">&apos;title&apos;</span>], <span class="hljs-string">&apos;description&apos;</span>: rst[<span class="hljs-string">&apos;project&apos;</span>][<span class="hljs-string">&apos;description&apos;</span>], <span class="hljs-string">&apos;benefits&apos;</span>: rst[<span class="hljs-string">&apos;project&apos;</span>][<span class="hljs-string">&apos;benefits&apos;</span>]})
+
+    NASA_project_DF= pd.DataFrame(mydata,ignore_index=<span class="hljs-string">&apos;True&apos;</span>)
+    NASA_project_DF.to_csv(<span class="hljs-string">&quot;NASA_Project.csv&quot;</span>)
+
+main()
+</code></pre>
+<h2 id="additional-resources">Additional Resources</h2>
+<ul>
+<li><a href="https://www.w3schools.com/python/default.asp" target="_blank">W3schools</a></li>
+<li><a href="https://www.onlinegdb.com/online_python_interpreter" target="_blank">Online Python Interpreter</a></li>
+<li><a href="http://quantlet.de/" target="_blank">Quantlet</a></li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="Lecture 1.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Lecture 1">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"next":{"title":"Lecture 1","level":"1.2","depth":1,"path":"Lecture 1.md","ref":"Lecture 1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2020-03-12T22:59:50.478Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-12T23:06:44.317Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

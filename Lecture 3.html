@@ -1,0 +1,497 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Lecture 3 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Lecture 4.html" />
+    
+    
+    <link rel="prev" href="Lecture 2.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="Lecture 1.html">
+            
+                <a href="Lecture 1.html">
+            
+                    
+                    Lecture 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="Lecture 2.html">
+            
+                <a href="Lecture 2.html">
+            
+                    
+                    Lecture 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="Lecture 3.html">
+            
+                <a href="Lecture 3.html">
+            
+                    
+                    Lecture 3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="Lecture 4.html">
+            
+                <a href="Lecture 4.html">
+            
+                    
+                    Lecture 4
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Lecture 3</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="lecture-3">Lecture 3</h1>
+<p>This lecture taught by of <a href="https://www.gla.ac.uk/schools/business/staff/cathyyi-hsuanchen/" target="_blank">Prof. Cathy Yi-Hsuan Chen</a>
+focuses on web language including <strong>HTML</strong>, <strong>XML</strong>, <strong>JSON</strong>, and the task of <strong>parsing</strong>, and <strong>RSS news feeds</strong></p>
+<p>Specifically, the code can be found in the <a href="https://github.com/QuantLet/DEDA_Class_2017" target="_blank">Github</a> </p>
+<p>Here is a video from <a href="https://www.coursera.org/lecture/service-oriented-architecture/4-1-5-html-xml-json-rK9X5" target="_blank">Coursera</a> </p>
+<h2 id="outlines">Outlines</h2>
+<ul>
+<li><a href="#headers">Web language</a><ul>
+<li><a href="#quotes">Http</a></li>
+<li><a href="#emphasis">XML</a></li>
+<li><a href="">JSON</a></li>
+</ul>
+</li>
+<li><a href="#horizontal-rule">Python request module</a></li>
+<li><a href="#lists">Parsing</a><ul>
+<li><a href="">Parsing XML</a></li>
+<li><a href="">Parsibg JSON</a></li>
+<li><a href="">RSS news feeds</a><ul>
+<li><a href="">Financial times news feeds</a></li>
+<li><a href="">Wall street journal news feeds</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="">Coursework</a></li>
+<li><a href="#additional-resources">Additional Resources</a></li>
+</ul>
+<hr>
+<h2 id="web-language">Web language</h2>
+<blockquote>
+<ul>
+<li>HTML (Hypertext Markup Language):  the standard markup language for documents designed to be displayed in a web browser. HTML was designed to display data - with focus on how data looks</li>
+<li>XML (eXtensible Markup Language): XML was designed to carry data - with focus on what data is, and XML tags are not predefined like HTML tags are</li>
+<li>JSON (JavaScript Object Notation): JSON is a syntax for storing and exchanging data between a browser and a server</li>
+</ul>
+</blockquote>
+<h3 id="htmp">HTMP</h3>
+<blockquote>
+<ul>
+<li>Describes the structure of a Web page </li>
+<li>Consists of a series of elements represented by <strong>tags</strong></li>
+<li>Elements tell the browser how to display the content</li>
+<li>HTML tags label pieces of content such as &quot;heading&quot;, &quot;paragraph&quot;, &quot;table&quot;, and so on</li>
+<li>Browsers do not display the HTML tags, but use them to render the content of the page</li>
+</ul>
+</blockquote>
+<pre><code class="lang-HTML"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>        # declaration represents the document type
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>             # element is the root element of an HTML page
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>             # element contains meta information about the document
+<span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Page Title<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>  # specifies title for the document
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>            # contains the visible page content
+
+<span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>My First Heading<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>    # defines a large heading
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>My first paragraph.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>     # defines a paragraph
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<h3 id="xml">XML</h3>
+<blockquote>
+<ul>
+<li>XML language has no predefined tags</li>
+<li>Tags are &quot;invented&quot; by the author of the XML document</li>
+<li>Author must define both the tags and the document structure</li>
+</ul>
+</blockquote>
+<pre><code>&lt;note&gt;
+  &lt;date&gt;2015-09-01&lt;/date&gt;
+  &lt;hour&gt;08:30&lt;/hour&gt;
+  &lt;to&gt;Tove&lt;/to&gt;
+  &lt;from&gt;Jani&lt;/from&gt;
+  &lt;body&gt;Don&apos;t forget me this weekend!&lt;/body&gt;
+&lt;/note&gt;
+</code></pre><pre><code>&lt;employees&gt;
+  &lt;employee&gt;
+    &lt;firstName&gt;John&lt;/firstName&gt; &lt;lastName&gt;Doe&lt;/lastName&gt;
+  &lt;/employee&gt;
+  &lt;employee&gt;
+    &lt;firstName&gt;Anna&lt;/firstName&gt; &lt;lastName&gt;Smith&lt;/lastName&gt;
+  &lt;/employee&gt;
+  &lt;employee&gt;
+    &lt;firstName&gt;Peter&lt;/firstName&gt; &lt;lastName&gt;Jones&lt;/lastName&gt;
+  &lt;/employee&gt;
+&lt;/employees&gt;
+</code></pre><h3 id="json">JSON</h3>
+<blockquote>
+<ul>
+<li>JSON is a syntax for storing and exchanging data</li>
+<li>JSON is text, written with JavaScript object notation</li>
+<li>A lightweight data-interchange format, and it is &quot;self-describing&quot; </li>
+<li>We can also convert any JSON received from the server into JavaScript objects, and work with the data as JavaScript objects</li>
+</ul>
+</blockquote>
+<h4 id="json-syntax-rules">JSON Syntax Rules</h4>
+<blockquote>
+<ul>
+<li>Data is in key/value pairs</li>
+<li>Data is separated by commas</li>
+<li>Curly braces hold objects</li>
+<li>Square brackets hold arrays</li>
+</ul>
+</blockquote>
+<pre><code class="lang-python">{<span class="hljs-string">&quot;employees&quot;</span>:[
+  { <span class="hljs-string">&quot;firstName&quot;</span>:<span class="hljs-string">&quot;John&quot;</span>, <span class="hljs-string">&quot;lastName&quot;</span>:<span class="hljs-string">&quot;Doe&quot;</span> },
+  { <span class="hljs-string">&quot;firstName&quot;</span>:<span class="hljs-string">&quot;Anna&quot;</span>, <span class="hljs-string">&quot;lastName&quot;</span>:<span class="hljs-string">&quot;Smith&quot;</span> },
+  { <span class="hljs-string">&quot;firstName&quot;</span>:<span class="hljs-string">&quot;Peter&quot;</span>, <span class="hljs-string">&quot;lastName&quot;</span>:<span class="hljs-string">&quot;Jones&quot;</span> }
+]}
+</code></pre>
+<h2 id="python-requests-module">Python Requests Module</h2>
+<p>Make a request to a web page, and print the response text</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> requests
+<span class="hljs-comment"># Sends a GET request to the specified url</span>
+x = requests.get(<span class="hljs-string">&apos;https://w3schools.com/python/demopage.htm&apos;</span>) 
+print(x.text)
+</code></pre>
+<h1 id="parsing">Parsing</h1>
+<p>Parsing is the process of analyzing a string of symbols. The term parsing comes from Latin <em>pars</em> (orationis), meaning part (of speech). Within computational linguistics the term is used to refer to the formal analysis by a computer of a sentence or other string of words into its constituents, resulting in a parse tree showing their syntactic relation to each other, which may also contain semantic and other information.</p>
+<h2 id="parser">Parser</h2>
+<ul>
+<li>A parser is a software component that takes input data (frequently text) and builds a data structure &#x2013; often some kind of parse tree, abstract syntax tree or other hierarchical structure, giving a structural representation of the input.</li>
+<li>In the case of data languages, a parser is often found as the file reading facility of a program, such as reading in HTML or XML text; these examples are markup languages. </li>
+</ul>
+<!--profile]: https://www.omgubuntu.co.uk/wp-content/uploads/2018/06/github-logo.jpeg "嘤嘤嘤"-->
+<p><img src="https://makeawebsitehub.com/wp-content/uploads/2016/04/social_media.jpg" alt="James Quick"> </p>
+<h2 id="parsing-xml">Parsing XML</h2>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> requests
+<span class="hljs-keyword">import</span> xml.dom.minidom   <span class="hljs-comment"># module for XML parser</span>
+
+response = requests.get(
+    <span class="hljs-string">&quot;https://www.treasury.gov/resource-center/data-chart-center/interest-rates/Datasets/daily_treas_bill_rates.xml&quot;</span>)
+content_1 = response.content
+dataDOM_1 = xml.dom.minidom.parseString(content_1)
+
+response = requests.get(
+    <span class="hljs-string">&quot;https://news.google.com/news/rss/headlines/section/q/finance%20news/finance%20news?ned=us&amp;hl=en&quot;</span>)
+content_2 = response.content
+dataDOM_2= xml.dom.minidom.parseString(content_2)
+</code></pre>
+<h2 id="parsing-json">Parsing JSON</h2>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> requests
+<span class="hljs-keyword">import</span> json
+<span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd
+
+url = <span class="hljs-string">&apos;http://data.thecrix.de/data/crix.json&apos;</span>
+r = requests.get(url)
+
+content = r.content
+
+<span class="hljs-comment"># json.loads : parse a JSON string</span>
+js_content = json.loads(content)
+<span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> js_content:
+    print(item)
+
+<span class="hljs-comment"># make a data frame</span>
+data_raw = pd.DataFrame(js_content)
+data_raw.set_index(keys=<span class="hljs-string">&apos;date&apos;</span>, inplace=<span class="hljs-keyword">True</span>)
+
+<span class="hljs-comment"># make a time-series plot</span>
+data_raw.plot()
+</code></pre>
+<h2 id="rss-news-feed">RSS news feed</h2>
+<p>RSS (originally RDF Site Summary)  is a web feed which allows users and applications to access updates to websites in a standardized, computer-readable format. These feeds can, for example, allow a user to keep track of many different websites in a single news aggregator. The news aggregator will automatically check the RSS feed for new content, allowing the list to be automatically passed from website to website or from website to user.</p>
+<p>note: web feed (or news feed) is a data format used for providing users with frequently updated content. </p>
+<h3 id="financial-times-news-feed">Financial times news feed</h3>
+<p>Please visit <a href="https://www.ft.com/content/35e83992-67ac-11dd-8d3b-0000779fd18c" target="_blank">Financial times RSS feed</a>, and click <a href="https://www.ft.com/business-education?format=rss" target="_blank">business education RSS feed</a></p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> feedparser   <span class="hljs-comment"># parser for parsing RSS feed</span>
+
+<span class="hljs-comment"># retrieve RSS feedback</span>
+content = feedparser.parse(<span class="hljs-string">&quot;https://www.ft.com/?edition=international&amp;format=rss&quot;</span>)
+
+<span class="hljs-comment"># list all titles</span>
+print(<span class="hljs-string">&quot;\nTitles-------------------------\n&quot;</span>)
+<span class="hljs-keyword">for</span> index, item <span class="hljs-keyword">in</span> enumerate(content.entries):
+    print(<span class="hljs-string">&quot;{0}.{1}&quot;</span>.format(index, item[<span class="hljs-string">&quot;title&quot;</span>]))
+
+<span class="hljs-comment"># list all description</span>
+print(<span class="hljs-string">&quot;\r\nDescriptions-------------------\r\n&quot;</span>)
+<span class="hljs-keyword">for</span> index, item <span class="hljs-keyword">in</span> enumerate(content.entries):
+    print(<span class="hljs-string">&quot;{0}.{1}\n&quot;</span>.format(index, item[<span class="hljs-string">&quot;description&quot;</span>]))
+</code></pre>
+<h3 id="wall-street-journal-news-feed">Wall Street Journal news feed</h3>
+<p>please visit <a href="https://www.wsj.com/news/rss-news-and-feeds" target="_blank">Wall street journal RSS feed</a></p>
+<p>Choose the news category of interest, for instance <a href="https://feeds.a.dj.com/rss/WSJcomUSBusiness.xml" target="_blank">U.S. Business</a></p>
+<pre><code class="lang-python">mport feedparser   <span class="hljs-comment"># parser for parsing RSS feed</span>
+
+<span class="hljs-comment"># retrieve RSS feedback for US. business news</span>
+content = feedparser.parse(<span class="hljs-string">&quot;https://feeds.a.dj.com/rss/WSJcomUSBusiness.xml&quot;</span>)
+
+<span class="hljs-comment"># list all titles</span>
+dfData_title = pd.DataFrame(columns=[<span class="hljs-string">&apos;title&apos;</span>])
+<span class="hljs-keyword">for</span> index, item <span class="hljs-keyword">in</span> enumerate(content.entries):
+    dfData_title = dfData_title.append({<span class="hljs-string">&apos;title&apos;</span>: item[<span class="hljs-string">&quot;title&quot;</span>]}, ignore_index=<span class="hljs-keyword">True</span>)
+    print(<span class="hljs-string">&quot;{0}.{1}&quot;</span>.format(index, item[<span class="hljs-string">&quot;title&quot;</span>]))
+
+<span class="hljs-comment"># list all description</span>
+print(<span class="hljs-string">&quot;\r\nDescriptions-------------------\r\n&quot;</span>)
+dfData_des = pd.DataFrame(columns=[<span class="hljs-string">&apos;description&apos;</span>])  <span class="hljs-comment"># create a dataframe</span>
+<span class="hljs-keyword">for</span> index, item <span class="hljs-keyword">in</span> enumerate(content.entries):
+    dfData_des = dfData_des.append({<span class="hljs-string">&apos;description&apos;</span>: item[<span class="hljs-string">&quot;description&quot;</span>]}, ignore_index=<span class="hljs-keyword">True</span>)
+    print(<span class="hljs-string">&quot;{0}.{1}\n&quot;</span>.format(index, item[<span class="hljs-string">&quot;description&quot;</span>]))
+</code></pre>
+<h2 id="coursework">Coursework</h2>
+<p>Please search for other news feed, and try to implement parsing news feed</p>
+<p>You can consider <a href="https://www.bbc.co.uk/news/10628494" target="_blank">BBC news feed</a>, news categories in <a href="https://www.wsj.com/news/rss-news-and-feeds" target="_blank">Wall street journal RSS feed</a>, or others in the worldwide.</p>
+<h2 id="additional-resources">Additional Resources</h2>
+<ul>
+<li><a href="https://www.w3schools.com/python/default.asp" target="_blank">W3schools</a></li>
+<li><a href="https://repl.it/" target="_blank">Online Python Interpreter</a></li>
+<li><a href="https://pandas.pydata.org/pandas-docs/stable/reference/general_functions.html" target="_blank">Pandas document</a></li>
+<li><a href="http://quantlet.de/" target="_blank">Quantlet</a></li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Lecture 2.html" class="navigation navigation-prev " aria-label="Previous page: Lecture 2">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Lecture 4.html" class="navigation navigation-next " aria-label="Next page: Lecture 4">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Lecture 3","level":"1.4","depth":1,"next":{"title":"Lecture 4","level":"1.5","depth":1,"path":"Lecture 4.md","ref":"Lecture 4.md","articles":[]},"previous":{"title":"Lecture 2","level":"1.3","depth":1,"path":"Lecture 2.md","ref":"Lecture 2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Lecture 3.md","mtime":"2020-03-09T16:44:37.641Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-12T23:06:44.317Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
