@@ -1,0 +1,497 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Lecture 5 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="Lecture 4.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Financial Information Retrieval
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="Lecture 1.html">
+            
+                <a href="Lecture 1.html">
+            
+                    
+                    Lecture 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="Lecture 2.html">
+            
+                <a href="Lecture 2.html">
+            
+                    
+                    Lecture 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="Lecture 3.html">
+            
+                <a href="Lecture 3.html">
+            
+                    
+                    Lecture 3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="Lecture 4.html">
+            
+                <a href="Lecture 4.html">
+            
+                    
+                    Lecture 4
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6" data-path="Lecture 5.html">
+            
+                <a href="Lecture 5.html">
+            
+                    
+                    Lecture 5
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Lecture 5</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="lecture-5">Lecture 5</h1>
+<p>This lecture taught by of <a href="https://www.gla.ac.uk/schools/business/staff/cathyyi-hsuanchen/" target="_blank">Prof. Cathy Yi-Hsuan Chen</a>
+focuses on textual analysis. Here we introduce <strong>NLP</strong> (Natural Language Processing) techniques including <strong>Tokenization</strong>, <strong>Negation handling</strong>, <strong>Part of Speech tagging</strong> (PoS) and <strong>Lemmatization</strong>. </p>
+<p>Specifically, the code can be found in the <a href="https://github.com/chencath/DataRetrieval" target="_blank">Github</a> </p>
+<p>Some useful online courses, <a href="https://www.youtube.com/watch?v=oWsMIW-5xUc&amp;list=PLLssT5z_DsK8HbD2sPcUIDfQ7zmBarMYv" target="_blank">stanford univesrsity</a></p>
+<h2 id="outlines">Outlines</h2>
+<ul>
+<li><a href="#What-is-NLP">What is NLP</a><ul>
+<li><a href="#How-NLP-works">How NLP works</a></li>
+<li><a href="#Zoom-in-NLP">Zoom in NLP</a></li>
+</ul>
+</li>
+<li><a href="#NLTK">NLTK</a><ul>
+<li><a href="#Tokenize-and-tag-text">Tokenize and tag text</a></li>
+</ul>
+</li>
+<li><a href="Sentiment-Textual-analysis">Sentiment / Textual analysis</a></li>
+<li><a href="Create-wordcloud">Create wordcloud</a></li>
+<li><a href="#additional-resources">Additional Resources</a></li>
+</ul>
+<hr>
+<p><img src="https://miro.medium.com/max/1110/0*M6-atLxy_WR3LN1R.jpg" alt="James Quick"> </p>
+<h2 id="what-is-nlp-">What is NLP ?</h2>
+<ul>
+<li>with NLP, we can generate &quot;machine-readable&quot; text, that can be further analyzed by Artificial Intelligence or Machine Learning</li>
+<li>with NLP, we build an interaction between computers and humans using the natural language</li>
+<li>Most NLP techniques rely on machine learning to derive meaning from human languages</li>
+<li>NLP is considered a difficult problem in computer science. It&#x2019;s the nature of the human language that makes NLP difficult.</li>
+</ul>
+<h3 id="how-nlp-works">How NLP works</h3>
+<ul>
+<li>NLP identifies and extracts the natural language rules such that the unstructured text is converted into a form that computers can understand</li>
+<li>Given the text provided, the computer will utilize algorithms to extract meaning associated with every sentence and collect the essential data from them</li>
+<li>It may happen that the computer fails to understand the meaning of a sentence well, leading to obscure results.</li>
+</ul>
+<h3 id="zoom-in-nlp">Zoom in NLP</h3>
+<ul>
+<li>Text is unstructured data with implicit structure<ul>
+<li>Text, sentences, words, characters</li>
+<li>Nouns, verbs, adjectives</li>
+<li>Grammar</li>
+</ul>
+</li>
+<li>Transform implicit text structure into explicit structure</li>
+<li>Reduce text variation for further analysis</li>
+<li>Python Natural Language Toolkit <a href="https://www.nltk.org/" target="_blank">NLTK</a></li>
+</ul>
+<h2 id="nltk">NLTK</h2>
+<p>Natural Language Toolkit is an open source library for the Python programming language. It contains text processing libraries for tokenization, parsing, classification, stemming, tagging and semantic reasoning. It also includes graphical demonstrations and sample data sets as well as accompanied by a cook book and a book which explains the principles behind the underlying language processing tasks that NLTK supports.</p>
+<h3 id="tokenize-and-tag-text">Tokenize and tag text</h3>
+<blockquote>
+<ul>
+<li>Decompose a string into sentences</li>
+<li>Decompose a sentence into words/tokens</li>
+</ul>
+</blockquote>
+<pre><code class="lang-python"><span class="hljs-string">&quot;&quot;&quot; read text &quot;&quot;&quot;</span>
+<span class="hljs-keyword">with</span> open(<span class="hljs-string">&apos;shakespeare.txt&apos;</span>, <span class="hljs-string">&apos;r&apos;</span>, encoding=<span class="hljs-string">&apos;utf-8&apos;</span>) <span class="hljs-keyword">as</span> shakespeare_read:
+    <span class="hljs-comment"># read(n) method will put n characters into a string</span>
+    shakespeare_string = shakespeare_read.read()
+</code></pre>
+<pre><code class="lang-python"><span class="hljs-string">&quot;&quot;&quot; remove stop words &quot;&quot;&quot;</span>
+
+STOPWORDS = [<span class="hljs-string">&quot;an&quot;</span>, <span class="hljs-string">&quot;a&quot;</span>, <span class="hljs-string">&quot;the&quot;</span>, <span class="hljs-string">&quot;or&quot;</span>, <span class="hljs-string">&quot;and&quot;</span>, <span class="hljs-string">&quot;thou&quot;</span>, <span class="hljs-string">&quot;must&quot;</span>, <span class="hljs-string">&quot;that&quot;</span>, <span class="hljs-string">&quot;this&quot;</span>, <span class="hljs-string">&quot;self&quot;</span>, <span class="hljs-string">&quot;unless&quot;</span>, <span class="hljs-string">&quot;behind&quot;</span>, <span class="hljs-string">&quot;for&quot;</span>, <span class="hljs-string">&quot;which&quot;</span>,
+             <span class="hljs-string">&quot;whose&quot;</span>, <span class="hljs-string">&quot;can&quot;</span>, <span class="hljs-string">&quot;else&quot;</span>, <span class="hljs-string">&quot;some&quot;</span>, <span class="hljs-string">&quot;will&quot;</span>, <span class="hljs-string">&quot;so&quot;</span>, <span class="hljs-string">&quot;from&quot;</span>, <span class="hljs-string">&quot;to&quot;</span>, <span class="hljs-string">&quot;by&quot;</span>, <span class="hljs-string">&quot;within&quot;</span>, <span class="hljs-string">&quot;of&quot;</span>, <span class="hljs-string">&quot;upon&quot;</span>, <span class="hljs-string">&quot;th&quot;</span>, <span class="hljs-string">&quot;with&quot;</span>,
+             <span class="hljs-string">&quot;it&quot;</span>]
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_remove_stopwords</span><span class="hljs-params">(txt)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;Delete from txt all words contained in STOPWORDS.&quot;&quot;&quot;</span>
+    words = txt.split()
+    <span class="hljs-comment"># words = txt.split(&quot; &quot;)</span>
+    <span class="hljs-keyword">for</span> i, word <span class="hljs-keyword">in</span> enumerate(words):
+        <span class="hljs-keyword">if</span> word <span class="hljs-keyword">in</span> STOPWORDS:
+            words[i] = <span class="hljs-string">&quot; &quot;</span>
+    <span class="hljs-keyword">return</span> (<span class="hljs-string">&quot; &quot;</span>.join(words))
+</code></pre>
+<pre><code class="lang-python"><span class="hljs-string">&quot;&quot;&quot; create a list of sentences &quot;&quot;&quot;</span>
+<span class="hljs-keyword">import</span> re
+<span class="hljs-keyword">from</span> collections <span class="hljs-keyword">import</span> Counter
+
+doc_out = []
+<span class="hljs-keyword">for</span> k <span class="hljs-keyword">in</span> shakespeare_split:
+    cleantextprep = str(k)
+        <span class="hljs-comment"># Regex cleaning</span>
+    expression = <span class="hljs-string">&quot;[^a-zA-Z ]&quot;</span>  <span class="hljs-comment"># keep only letters, numbers and whitespace</span>
+    cleantextCAP = re.sub(expression, <span class="hljs-string">&apos;&apos;</span>, cleantextprep)  <span class="hljs-comment"># apply regex</span>
+    cleantext = cleantextCAP.lower()  <span class="hljs-comment"># lower case</span>
+    cleantext = _remove_stopwords(cleantext)
+    bound = <span class="hljs-string">&apos;&apos;</span>.join(cleantext)
+    doc_out.append(bound)       <span class="hljs-comment"># a list of sentences</span>
+</code></pre>
+<pre><code class="lang-python"><span class="hljs-string">&quot;&quot;&quot; decompose a list of sentences into tokens(words) &quot;&quot;&quot;</span>
+<span class="hljs-keyword">import</span> nltk
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">decompose_word</span><span class="hljs-params">(doc)</span>:</span>
+    txt = []
+    <span class="hljs-keyword">for</span> word <span class="hljs-keyword">in</span> doc:
+        txt.extend(word.split())
+    <span class="hljs-keyword">return</span> txt
+
+<span class="hljs-comment"># decompose a list of sentences into words by self-defined function</span>
+tokens = decompose_word(doc_out)
+<span class="hljs-comment"># decompose a list of sentences into words from NLTK module</span>
+tokens_nltk = nltk.word_tokenize(str(doc_out))
+</code></pre>
+<h2 id="sentiment--textual-analysis">Sentiment / Textual analysis</h2>
+<p>How to detect the tone or sentiment of text? Using the predefined lexicon that collects positive versus negative words with semantic polarity, we screen the tokens and count the words being classified via the employed lexicon. If the frequency of positive words is predominant than that of negative words, we infer an optimistic tone/sentiment in the text.</p>
+<ul>
+<li><p>We employ <a href="https://www.cs.uic.edu/~lzhang3/programs/OpinionLexicon.html" target="_blank">opinion lexicon</a> to identify text polarity.
+The lexicon-based approach for opinion mining depends on opinion (or sentiment) words, which are words that express positive or negative sentiments. Words that encode a desirable state (e.g., &quot;great&quot; and &quot;good&quot;) have a positive polarity, while words that encode an undesirable state have a negative polarity (e.g., &quot;bad&quot; and &quot;awful&quot;). Although opinion polarity normally applies to adjectives and adverbs, there are verb and noun opinion words as well.</p>
+</li>
+<li><p>The lexicon contains two classes (positive/negative) and 10 specific lists.</p>
+</li>
+</ul>
+<p><img src="https://miro.medium.com/max/1606/0*IwaUifbmSaVjxqjQ" alt="James Quick"> </p>
+<pre><code class="lang-python"><span class="hljs-string">&quot;&quot;&quot; Import lexicon for scrutify &quot;&quot;&quot;</span>
+<span class="hljs-comment"># Negative lexicon</span>
+ndct = <span class="hljs-string">&apos;&apos;</span>
+<span class="hljs-keyword">with</span> open(<span class="hljs-string">&apos;bl_negative.csv&apos;</span>, <span class="hljs-string">&apos;r&apos;</span>, encoding=<span class="hljs-string">&apos;utf-8&apos;</span>, errors=<span class="hljs-string">&apos;ignore&apos;</span>) <span class="hljs-keyword">as</span> infile:
+    <span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> infile:
+        ndct = ndct + line
+
+<span class="hljs-comment"># create a list of negative words</span>
+ndct = ndct.split(<span class="hljs-string">&apos;\n&apos;</span>)
+ndct = [entry <span class="hljs-keyword">for</span> entry <span class="hljs-keyword">in</span> ndct]
+len(ndct)    <span class="hljs-comment"># 4783 negative words</span>
+
+<span class="hljs-comment"># Positive lexicon</span>
+pdct = <span class="hljs-string">&apos;&apos;</span>
+<span class="hljs-keyword">with</span> open(<span class="hljs-string">&apos;bl_positive.csv&apos;</span>, <span class="hljs-string">&apos;r&apos;</span>, encoding=<span class="hljs-string">&apos;utf-8&apos;</span>, errors=<span class="hljs-string">&apos;ignore&apos;</span>) <span class="hljs-keyword">as</span> infile:
+    <span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> infile:
+        pdct = pdct + line
+
+pdct = pdct.split(<span class="hljs-string">&apos;\n&apos;</span>)
+pdct = [entry <span class="hljs-keyword">for</span> entry <span class="hljs-keyword">in</span> pdct]
+len(pdct)  <span class="hljs-comment"># 2009 positive words</span>
+</code></pre>
+<pre><code class="lang-python"><span class="hljs-string">&quot;&quot;&quot; screen tokens that are in the selected lexicon &quot;&quot;&quot;</span>
+
+<span class="hljs-comment"># list of negative words and their frequency</span>
+nwc = wordcount(tokens, ndct)   <span class="hljs-comment"># wordcount(text,lexicon)</span>
+<span class="hljs-comment"># [[&apos;die&apos;, 3], [&apos;famine&apos;, 1], [&apos;lies&apos;, 2], [&apos;foe&apos;, 1], [&apos;cruel&apos;, 1], [&apos;gaudy&apos;, 1], [&apos;waste&apos;, 2], [&apos;pity&apos;, 1], [&apos;besiege&apos;, 1], [&apos;tattered&apos;, 1], [&apos;weed&apos;, 1], [&apos;sunken&apos;, 1], [&apos;shame&apos;, 3], [&apos;excuse&apos;, 1], [&apos;cold&apos;, 1], [&apos;beguile&apos;, 1], [&apos;wrinkles&apos;, 1], [&apos;dies&apos;, 1], [&apos;abuse&apos;, 1], [&apos;deceive&apos;, 1], [&apos;hideous&apos;, 1], [&apos;sap&apos;, 1], [&apos;frost&apos;, 1], [&apos;prisoner&apos;, 1], [&apos;bereft&apos;, 1], [&apos;ragged&apos;, 1], [&apos;forbidden&apos;, 1], [&apos;death&apos;, 1], [&apos;burning&apos;, 1], [&apos;weary&apos;, 1], [&apos;feeble&apos;, 1], [&apos;sadly&apos;, 1], [&apos;annoy&apos;, 1], [&apos;offend&apos;, 1], [&apos;chide&apos;, 1], [&apos;wilt&apos;, 2], [&apos;fear&apos;, 1], [&apos;wail&apos;, 1], [&apos;weep&apos;, 1], [&apos;deny&apos;, 1], [&apos;hate&apos;, 2], [&apos;conspire&apos;, 1]]</span>
+
+<span class="hljs-comment"># list of positive words and their frequency</span>
+pwc = wordcount(tokens, pdct)
+<span class="hljs-comment"># [[&apos;tender&apos;, 2], [&apos;bright&apos;, 1], [&apos;abundance&apos;, 1], [&apos;sweet&apos;, 5], [&apos;fresh&apos;, 2], [&apos;spring&apos;, 1], [&apos;proud&apos;, 1], [&apos;worth&apos;, 1], [&apos;beauty&apos;, 7], [&apos;treasure&apos;, 3], [&apos;praise&apos;, 2], [&apos;fair&apos;, 3], [&apos;proving&apos;, 1], [&apos;warm&apos;, 1], [&apos;fond&apos;, 1], [&apos;lovely&apos;, 2], [&apos;golden&apos;, 2], [&apos;loveliness&apos;, 1], [&apos;free&apos;, 1], [&apos;beauteous&apos;, 2], [&apos;great&apos;, 1], [&apos;gentle&apos;, 2], [&apos;work&apos;, 1], [&apos;fairly&apos;, 1], [&apos;excel&apos;, 1], [&apos;leads&apos;, 1], [&apos;willing&apos;, 1], [&apos;happier&apos;, 2], [&apos;gracious&apos;, 2], [&apos;homage&apos;, 1], [&apos;majesty&apos;, 1], [&apos;heavenly&apos;, 1], [&apos;strong&apos;, 1], [&apos;adore&apos;, 1], [&apos;like&apos;, 2], [&apos;joy&apos;, 2], [&apos;gladly&apos;, 1], [&apos;pleasure&apos;, 1], [&apos;sweetly&apos;, 1], [&apos;happy&apos;, 1], [&apos;pleasing&apos;, 1], [&apos;well&apos;, 1], [&apos;enjoys&apos;, 1], [&apos;love&apos;, 4], [&apos;beloved&apos;, 1]]</span>
+
+<span class="hljs-comment"># Total number of positive/negative words</span>
+ntot, ptot = <span class="hljs-number">0</span>, <span class="hljs-number">0</span>
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(nwc)):
+    ntot += nwc[i][<span class="hljs-number">1</span>]
+
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(pwc)):
+    ptot += pwc[i][<span class="hljs-number">1</span>]
+</code></pre>
+<pre><code class="lang-python"><span class="hljs-string">&quot;&quot;&quot; Print results &quot;&quot;&quot;</span>
+
+print(<span class="hljs-string">&apos;Positive words:&apos;</span>)
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(pwc)):
+    print(str(pwc[i][<span class="hljs-number">0</span>]) + <span class="hljs-string">&apos;: &apos;</span> + str(pwc[i][<span class="hljs-number">1</span>]))
+print(<span class="hljs-string">&apos;Total number of positive words: &apos;</span> + str(ptot))
+print(<span class="hljs-string">&apos;\n&apos;</span>)
+print(<span class="hljs-string">&apos;Percentage of positive words: &apos;</span> + str(round(ptot / nwords, <span class="hljs-number">4</span>)))
+print(<span class="hljs-string">&apos;\n&apos;</span>)
+print(<span class="hljs-string">&apos;Negative words:&apos;</span>)
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(nwc)):
+    print(str(nwc[i][<span class="hljs-number">0</span>]) + <span class="hljs-string">&apos;: &apos;</span> + str(nwc[i][<span class="hljs-number">1</span>]))
+print(<span class="hljs-string">&apos;Total number of negative words: &apos;</span> + str(ntot))
+print(<span class="hljs-string">&apos;\n&apos;</span>)
+print(<span class="hljs-string">&apos;Percentage of negative words: &apos;</span> + str(round(ntot / nwords, <span class="hljs-number">4</span>)))
+</code></pre>
+<h2 id="create-wordcloud">Create wordcloud</h2>
+<p>A demonstration of wordcloud generated from Shakespeare text</p>
+<p><img src="https://github.com/chencath/DataRetrieval/blob/master/wordcloud.png?raw=true" alt="James Quick"></p>
+<pre><code class="lang-python"><span class="hljs-string">&quot;&quot;&quot; import wordcloud from python 3.7 envi &quot;&quot;&quot;</span>
+
+<span class="hljs-keyword">from</span> wordcloud <span class="hljs-keyword">import</span> WordCloud <span class="hljs-comment"># using python 3.7</span>
+
+comment_words = <span class="hljs-string">&apos; &apos;</span>
+<span class="hljs-keyword">for</span> token <span class="hljs-keyword">in</span> tokens:
+    comment_words = comment_words + token + <span class="hljs-string">&apos; &apos;</span>
+
+wordcloud = WordCloud(width = <span class="hljs-number">800</span>, height = <span class="hljs-number">800</span>,
+                background_color =<span class="hljs-string">&apos;white&apos;</span>,
+                min_font_size = <span class="hljs-number">10</span>).generate(comment_words)
+</code></pre>
+<pre><code class="lang-python"><span class="hljs-string">&quot;&quot;&quot; plot wordcloud &quot;&quot;&quot;</span>
+
+<span class="hljs-keyword">import</span> matplotlib
+matplotlib.use(<span class="hljs-string">&quot;TkAgg&quot;</span>)  <span class="hljs-comment"># only needed for Mac OS</span>
+<span class="hljs-keyword">from</span> matplotlib <span class="hljs-keyword">import</span> pyplot <span class="hljs-keyword">as</span> plt
+
+plt.figure(figsize=(<span class="hljs-number">8</span>, <span class="hljs-number">8</span>), facecolor=<span class="hljs-keyword">None</span>)
+plt.imshow(wordcloud)
+plt.axis(<span class="hljs-string">&quot;off&quot;</span>)
+plt.tight_layout(pad=<span class="hljs-number">0</span>)
+plt.savefig(<span class="hljs-string">&quot;wordcloud.png&quot;</span>,format=<span class="hljs-string">&apos;png&apos;</span>,dpi=<span class="hljs-number">200</span>)
+plt.show()
+</code></pre>
+<h2 id="additional-resources">Additional Resources</h2>
+<ul>
+<li><a href="https://www.nltk.org/" target="_blank">NLTK</a></li>
+<li><a href="https://www.onlinegdb.com/online_python_interpreter" target="_blank">Online Python Interpreter</a></li>
+<li><a href="https://www.cs.uic.edu/~lzhang3/programs/OpinionLexicon.html" target="_blank">Opinion Lexicon</a></li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Lecture 4.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Lecture 4">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Lecture 5","level":"1.6","depth":1,"previous":{"title":"Lecture 4","level":"1.5","depth":1,"path":"Lecture 4.md","ref":"Lecture 4.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Lecture 5.md","mtime":"2020-03-15T18:04:05.757Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-15T19:01:03.692Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
