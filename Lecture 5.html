@@ -224,28 +224,30 @@ focuses on textual analysis. Here we introduce <strong>NLP</strong> (Natural Lan
 </li>
 <li><a href="#NLTK">NLTK</a><ul>
 <li><a href="#Tokenize-and-tag-text">Tokenize and tag text</a></li>
+<li><a href="#Stopwords">Stopwords</a></li>
+<li><a href="#Lemmatization">Lemmatization</a></li>
 </ul>
 </li>
-<li><a href="Sentiment-Textual-analysis">Sentiment / Textual analysis</a></li>
-<li><a href="Create-wordcloud">Create wordcloud</a></li>
+<li><a href="#Sentiment-Textual-analysis">Sentiment / Textual analysis</a></li>
+<li><a href="#Create-wordcloud">Create wordcloud</a></li>
 <li><a href="#additional-resources">Additional Resources</a></li>
 </ul>
 <hr>
 <p><img src="https://miro.medium.com/max/1110/0*M6-atLxy_WR3LN1R.jpg" alt="James Quick"> </p>
-<h2 id="what-is-nlp-">What is NLP ?</h2>
+<h2 id="what-is-nlp"><span id="What-is-NLP"> What is NLP</span></h2>
 <ul>
 <li>with NLP, we can generate &quot;machine-readable&quot; text, that can be further analyzed by Artificial Intelligence or Machine Learning</li>
 <li>with NLP, we build an interaction between computers and humans using the natural language</li>
 <li>Most NLP techniques rely on machine learning to derive meaning from human languages</li>
 <li>NLP is considered a difficult problem in computer science. It&#x2019;s the nature of the human language that makes NLP difficult.</li>
 </ul>
-<h3 id="how-nlp-works">How NLP works</h3>
+<h3 id="how-nlp-works"><span id="How-NLP-works"> How NLP works</span></h3>
 <ul>
 <li>NLP identifies and extracts the natural language rules such that the unstructured text is converted into a form that computers can understand</li>
 <li>Given the text provided, the computer will utilize algorithms to extract meaning associated with every sentence and collect the essential data from them</li>
 <li>It may happen that the computer fails to understand the meaning of a sentence well, leading to obscure results.</li>
 </ul>
-<h3 id="zoom-in-nlp">Zoom in NLP</h3>
+<h3 id="zoom-in-nlp"><span id="Zoom-in-NLP"> Zoom in NLP</span></h3>
 <ul>
 <li>Text is unstructured data with implicit structure<ul>
 <li>Text, sentences, words, characters</li>
@@ -257,9 +259,9 @@ focuses on textual analysis. Here we introduce <strong>NLP</strong> (Natural Lan
 <li>Reduce text variation for further analysis</li>
 <li>Python Natural Language Toolkit <a href="https://www.nltk.org/" target="_blank">NLTK</a></li>
 </ul>
-<h2 id="nltk">NLTK</h2>
+<h2 id="nltk"><span id="NLTK"> NLTK</span></h2>
 <p>Natural Language Toolkit is an open source library for the Python programming language. It contains text processing libraries for tokenization, parsing, classification, stemming, tagging and semantic reasoning. It also includes graphical demonstrations and sample data sets as well as accompanied by a cook book and a book which explains the principles behind the underlying language processing tasks that NLTK supports.</p>
-<h3 id="tokenize-and-tag-text">Tokenize and tag text</h3>
+<h3 id="tokenize-and-tag-text"><span id="Tokenize-and-tag-text"> Tokenize and tag text</span></h3>
 <blockquote>
 <ul>
 <li>Decompose a string into sentences</li>
@@ -315,7 +317,47 @@ tokens = decompose_word(doc_out)
 <span class="hljs-comment"># decompose a list of sentences into words from NLTK module</span>
 tokens_nltk = nltk.word_tokenize(str(doc_out))
 </code></pre>
-<h2 id="sentiment--textual-analysis">Sentiment / Textual analysis</h2>
+<h3 id="stopwords"><span id="Stopwords"> Stopwords</span></h3>
+<pre><code class="lang-python"><span class="hljs-string">&quot;&quot;&quot; removing stopwords &quot;&quot;&quot;</span>
+<span class="hljs-keyword">import</span> nltk
+<span class="hljs-keyword">from</span> nltk.corpus <span class="hljs-keyword">import</span> stopwords
+<span class="hljs-keyword">from</span> nltk.tokenize <span class="hljs-keyword">import</span> word_tokenize
+
+example_sent = <span class="hljs-string">&quot;This is a sample sentence, showing off the stop words filtration.&quot;</span>
+<span class="hljs-comment"># stop words in English</span>
+stop_words = set(stopwords.words(<span class="hljs-string">&apos;english&apos;</span>))
+<span class="hljs-comment"># stop words in German</span>
+stop_words_German = set(stopwords.words(<span class="hljs-string">&apos;german&apos;</span>))
+<span class="hljs-comment"># stop words in Italian</span>
+stop_words_italian = set(stopwords.words(<span class="hljs-string">&apos;italian&apos;</span>))
+
+word_tokens = word_tokenize(example_sent)
+<span class="hljs-comment"># compact syntax</span>
+filtered_sentence = [w <span class="hljs-keyword">for</span> w <span class="hljs-keyword">in</span> word_tokens <span class="hljs-keyword">if</span> w <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> stop_words]
+<span class="hljs-comment"># standard syntax</span>
+filtered_sentence = []
+<span class="hljs-keyword">for</span> w <span class="hljs-keyword">in</span> word_tokens:
+    <span class="hljs-keyword">if</span> w <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> stop_words:
+        filtered_sentence.append(w)
+
+print(word_tokens)
+print(filtered_sentence)
+</code></pre>
+<h3 id="lemmatization"><span id="Lemmatization">Lemmatization</span></h3>
+<pre><code class="lang-python"><span class="hljs-string">&quot;&quot;&quot; removing stopwords &quot;&quot;&quot;</span>
+<span class="hljs-keyword">from</span> nltk.stem <span class="hljs-keyword">import</span> WordNetLemmatizer
+
+lemmatizer = WordNetLemmatizer()
+
+print(<span class="hljs-string">&quot;rocks :&quot;</span>, lemmatizer.lemmatize(<span class="hljs-string">&quot;rocks&quot;</span>))
+<span class="hljs-comment"># rocks : rock</span>
+print(<span class="hljs-string">&quot;corpora :&quot;</span>, lemmatizer.lemmatize(<span class="hljs-string">&quot;corpora&quot;</span>))
+<span class="hljs-comment"># corpora : corpus</span>
+<span class="hljs-comment"># a denotes adjective in &quot;pos&quot;</span>
+print(<span class="hljs-string">&quot;better :&quot;</span>, lemmatizer.lemmatize(<span class="hljs-string">&quot;better&quot;</span>, pos =<span class="hljs-string">&quot;a&quot;</span>))
+<span class="hljs-comment">#better : good</span>
+</code></pre>
+<h2 id="sentiment--textual-analysis"><span id="Sentiment-Textual-analysis"> Sentiment / Textual analysis</span></h2>
 <p>How to detect the tone or sentiment of text? Using the predefined lexicon that collects positive versus negative words with semantic polarity, we screen the tokens and count the words being classified via the employed lexicon. If the frequency of positive words is predominant than that of negative words, we infer an optimistic tone/sentiment in the text.</p>
 <ul>
 <li><p>We employ <a href="https://www.cs.uic.edu/~lzhang3/programs/OpinionLexicon.html" target="_blank">opinion lexicon</a> to identify text polarity.
@@ -381,7 +423,7 @@ print(<span class="hljs-string">&apos;Total number of negative words: &apos;</sp
 print(<span class="hljs-string">&apos;\n&apos;</span>)
 print(<span class="hljs-string">&apos;Percentage of negative words: &apos;</span> + str(round(ntot / nwords, <span class="hljs-number">4</span>)))
 </code></pre>
-<h2 id="create-wordcloud">Create wordcloud</h2>
+<h2 id="create-wordcloud"><span id="Create-wordcloud"> Create wordcloud</span></h2>
 <p>A demonstration of wordcloud generated from Shakespeare text</p>
 <p><img src="https://github.com/chencath/DataRetrieval/blob/master/wordcloud.png?raw=true" alt="James Quick"></p>
 <pre><code class="lang-python"><span class="hljs-string">&quot;&quot;&quot; import wordcloud from python 3.7 envi &quot;&quot;&quot;</span>
@@ -454,7 +496,7 @@ plt.show()
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Lecture 5","level":"1.6","depth":1,"previous":{"title":"Lecture 4","level":"1.5","depth":1,"path":"Lecture 4.md","ref":"Lecture 4.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Lecture 5.md","mtime":"2020-03-15T18:04:05.757Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-15T19:01:03.692Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Lecture 5","level":"1.6","depth":1,"previous":{"title":"Lecture 4","level":"1.5","depth":1,"path":"Lecture 4.md","ref":"Lecture 4.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Lecture 5.md","mtime":"2020-03-19T11:06:57.466Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-19T11:07:31.212Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

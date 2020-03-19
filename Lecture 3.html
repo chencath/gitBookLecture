@@ -220,7 +220,7 @@ focuses on web language including <strong>HTML</strong>, <strong>XML</strong>, <
 <h2 id="outlines">Outlines</h2>
 <ul>
 <li><a href="#Web-language">Web language</a><ul>
-<li><a href="#http">Http</a></li>
+<li><a href="#html">HTML</a></li>
 <li><a href="#xml">XML</a></li>
 <li><a href="#json">JSON</a></li>
 </ul>
@@ -229,18 +229,18 @@ focuses on web language including <strong>HTML</strong>, <strong>XML</strong>, <
 <li><a href="#parsing">Parsing</a><ul>
 <li><a href="#parsing-xml">Parsing XML</a></li>
 <li><a href="#parsing-json">Parsibg JSON</a></li>
-<li><a href="#rss-news-feeds">RSS news feeds</a><ul>
-<li><a href="#Financial-times-news-feeds">Financial times news feeds</a></li>
-<li><a href="Wall-street-journal-news-feeds">Wall street journal news feeds</a></li>
 </ul>
 </li>
+<li><a href="#rss-news-feeds">RSS news feeds</a><ul>
+<li><a href="#Financial-times-news-feeds">Financial times news feeds</a></li>
+<li><a href="#Wall-street-journal-news-feeds">Wall street journal news feeds</a></li>
 </ul>
 </li>
 <li><a href="#Coursework">Coursework</a></li>
 <li><a href="#additional-resources">Additional Resources</a></li>
 </ul>
 <hr>
-<h2 id="web-language">Web language</h2>
+<h2 id="web-language"><span id="Web-language">Web language</span></h2>
 <blockquote>
 <ul>
 <li>HTML (Hypertext Markup Language):  the standard markup language for documents designed to be displayed in a web browser. HTML was designed to display data - with focus on how data looks</li>
@@ -248,7 +248,7 @@ focuses on web language including <strong>HTML</strong>, <strong>XML</strong>, <
 <li>JSON (JavaScript Object Notation): JSON is a syntax for storing and exchanging data between a browser and a server</li>
 </ul>
 </blockquote>
-<h3 id="htmp">HTMP</h3>
+<h3 id="html"><span id="html">HTML</span></h3>
 <blockquote>
 <ul>
 <li>Describes the structure of a Web page </li>
@@ -271,7 +271,7 @@ focuses on web language including <strong>HTML</strong>, <strong>XML</strong>, <
 <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
 </code></pre>
-<h3 id="xml">XML</h3>
+<h3 id="xml"><span id="xml">XML</span></h3>
 <blockquote>
 <ul>
 <li>XML language has no predefined tags</li>
@@ -297,7 +297,7 @@ focuses on web language including <strong>HTML</strong>, <strong>XML</strong>, <
     &lt;firstName&gt;Peter&lt;/firstName&gt; &lt;lastName&gt;Jones&lt;/lastName&gt;
   &lt;/employee&gt;
 &lt;/employees&gt;
-</code></pre><h3 id="json">JSON</h3>
+</code></pre><h3 id="json"><span id="json">JSON</span></h3>
 <blockquote>
 <ul>
 <li>JSON is a syntax for storing and exchanging data</li>
@@ -306,7 +306,7 @@ focuses on web language including <strong>HTML</strong>, <strong>XML</strong>, <
 <li>We can also convert any JSON received from the server into JavaScript objects, and work with the data as JavaScript objects</li>
 </ul>
 </blockquote>
-<h4 id="json-syntax-rules">JSON Syntax Rules</h4>
+<p>JSON Syntax Rules</p>
 <blockquote>
 <ul>
 <li>Data is in key/value pairs</li>
@@ -321,23 +321,23 @@ focuses on web language including <strong>HTML</strong>, <strong>XML</strong>, <
   { <span class="hljs-string">&quot;firstName&quot;</span>:<span class="hljs-string">&quot;Peter&quot;</span>, <span class="hljs-string">&quot;lastName&quot;</span>:<span class="hljs-string">&quot;Jones&quot;</span> }
 ]}
 </code></pre>
-<h2 id="python-requests-module">Python Requests Module</h2>
+<h2 id="python-requests-module"><span id="Python-request-module">Python Requests Module</span></h2>
 <p>Make a request to a web page, and print the response text</p>
 <pre><code class="lang-python"><span class="hljs-keyword">import</span> requests
 <span class="hljs-comment"># Sends a GET request to the specified url</span>
 x = requests.get(<span class="hljs-string">&apos;https://w3schools.com/python/demopage.htm&apos;</span>) 
 print(x.text)
 </code></pre>
-<h1 id="parsing">Parsing</h1>
+<h1 id="parsing"><span id="parsing">Parsing</span></h1>
 <p>Parsing is the process of analyzing a string of symbols. The term parsing comes from Latin <em>pars</em> (orationis), meaning part (of speech). Within computational linguistics the term is used to refer to the formal analysis by a computer of a sentence or other string of words into its constituents, resulting in a parse tree showing their syntactic relation to each other, which may also contain semantic and other information.</p>
-<h2 id="parser">Parser</h2>
+<h2 id="parser"><span id="Parser">Parser</span></h2>
 <ul>
 <li>A parser is a software component that takes input data (frequently text) and builds a data structure &#x2013; often some kind of parse tree, abstract syntax tree or other hierarchical structure, giving a structural representation of the input.</li>
 <li>In the case of data languages, a parser is often found as the file reading facility of a program, such as reading in HTML or XML text; these examples are markup languages. </li>
 </ul>
 <!--profile]: https://www.omgubuntu.co.uk/wp-content/uploads/2018/06/github-logo.jpeg "嘤嘤嘤"-->
 <p><img src="https://makeawebsitehub.com/wp-content/uploads/2016/04/social_media.jpg" alt="James Quick"> </p>
-<h2 id="parsing-xml">Parsing XML</h2>
+<h2 id="parsing-xml"><span id="parsing-xml">Parsing XML</span></h2>
 <pre><code class="lang-python"><span class="hljs-keyword">import</span> requests
 <span class="hljs-keyword">import</span> xml.dom.minidom   <span class="hljs-comment"># module for XML parser</span>
 
@@ -351,7 +351,7 @@ response = requests.get(
 content_2 = response.content
 dataDOM_2= xml.dom.minidom.parseString(content_2)
 </code></pre>
-<h2 id="parsing-json">Parsing JSON</h2>
+<h2 id="parsing-json"><span id="parsing-json">Parsing JSON</span></h2>
 <pre><code class="lang-python"><span class="hljs-keyword">import</span> requests
 <span class="hljs-keyword">import</span> json
 <span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd
@@ -374,10 +374,10 @@ data_raw.set_index(keys=<span class="hljs-string">&apos;date&apos;</span>, inpla
 data_raw.plot()
 </code></pre>
 <p><img src="https://github.com/chencath/DataRetrieval/blob/master/Cartoon.jpg?raw=true" alt="James Quick"> </p>
-<h2 id="rss-news-feed">RSS news feed</h2>
+<h1 id="rss-news-feed"><span id="rss-news-feeds">RSS news feed</span></h1>
 <p>RSS (originally RDF Site Summary)  is a web feed which allows users and applications to access updates to websites in a standardized, computer-readable format. These feeds can, for example, allow a user to keep track of many different websites in a single news aggregator. The news aggregator will automatically check the RSS feed for new content, allowing the list to be automatically passed from website to website or from website to user.</p>
 <p>note: web feed (or news feed) is a data format used for providing users with frequently updated content. </p>
-<h3 id="financial-times-news-feed">Financial times news feed</h3>
+<h2 id="financial-times-news-feed"><span id="Financial-times-news-feeds">Financial times news feed</span></h2>
 <p>Please visit <a href="https://www.ft.com/content/35e83992-67ac-11dd-8d3b-0000779fd18c" target="_blank">Financial times RSS feed</a>, and click <a href="https://www.ft.com/business-education?format=rss" target="_blank">business education RSS feed</a></p>
 <pre><code class="lang-python"><span class="hljs-keyword">import</span> feedparser   <span class="hljs-comment"># parser for parsing RSS feed</span>
 
@@ -394,7 +394,7 @@ print(<span class="hljs-string">&quot;\r\nDescriptions-------------------\r\n&qu
 <span class="hljs-keyword">for</span> index, item <span class="hljs-keyword">in</span> enumerate(content.entries):
     print(<span class="hljs-string">&quot;{0}.{1}\n&quot;</span>.format(index, item[<span class="hljs-string">&quot;description&quot;</span>]))
 </code></pre>
-<h3 id="wall-street-journal-news-feed">Wall Street Journal news feed</h3>
+<h2 id="wall-street-journal-news-feed"><span id="Wall-street-journal-news-feeds">Wall Street Journal news feed</span></h2>
 <p>please visit <a href="https://www.wsj.com/news/rss-news-and-feeds" target="_blank">Wall street journal RSS feed</a></p>
 <p>Choose the news category of interest, for instance <a href="https://feeds.a.dj.com/rss/WSJcomUSBusiness.xml" target="_blank">U.S. Business</a></p>
 <pre><code class="lang-python">mport feedparser   <span class="hljs-comment"># parser for parsing RSS feed</span>
@@ -415,7 +415,7 @@ dfData_des = pd.DataFrame(columns=[<span class="hljs-string">&apos;description&a
     dfData_des = dfData_des.append({<span class="hljs-string">&apos;description&apos;</span>: item[<span class="hljs-string">&quot;description&quot;</span>]}, ignore_index=<span class="hljs-keyword">True</span>)
     print(<span class="hljs-string">&quot;{0}.{1}\n&quot;</span>.format(index, item[<span class="hljs-string">&quot;description&quot;</span>]))
 </code></pre>
-<h2 id="coursework">Coursework</h2>
+<h2 id="coursework"><span id="Coursework">Coursework</span></h2>
 <p>Please search for other news feed, and try to implement parsing news feed</p>
 <p>You can consider <a href="https://www.bbc.co.uk/news/10628494" target="_blank">BBC news feed</a>, news categories in <a href="https://www.wsj.com/news/rss-news-and-feeds" target="_blank">Wall street journal RSS feed</a>, or others in the worldwide.</p>
 <h2 id="additional-resources">Additional Resources</h2>
@@ -468,7 +468,7 @@ dfData_des = pd.DataFrame(columns=[<span class="hljs-string">&apos;description&a
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Lecture 3","level":"1.4","depth":1,"next":{"title":"Lecture 4","level":"1.5","depth":1,"path":"Lecture 4.md","ref":"Lecture 4.md","articles":[]},"previous":{"title":"Lecture 2","level":"1.3","depth":1,"path":"Lecture 2.md","ref":"Lecture 2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Lecture 3.md","mtime":"2020-03-15T18:21:58.202Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-15T19:01:03.692Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Lecture 3","level":"1.4","depth":1,"next":{"title":"Lecture 4","level":"1.5","depth":1,"path":"Lecture 4.md","ref":"Lecture 4.md","articles":[]},"previous":{"title":"Lecture 2","level":"1.3","depth":1,"path":"Lecture 2.md","ref":"Lecture 2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Lecture 3.md","mtime":"2020-03-18T17:03:35.766Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-19T11:07:31.212Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

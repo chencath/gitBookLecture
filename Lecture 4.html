@@ -219,33 +219,33 @@ focuses on testing API accessibility via Postman. We demonstrate three cases of 
 <p>Here is <a href="https://www.guru99.com/postman-tutorial.html" target="_blank">Postman Tutorial</a> where it guides you the interface of Postman</p>
 <h2 id="outlines">Outlines</h2>
 <ul>
-<li><a href="#api">API</a><ul>
+<li><a href="#api">What is API ?</a><ul>
 <li><a href="#web-api">Web API</a></li>
-<li><a href="#emphasis">Postman API</a></li>
+<li><a href="#postman">Postman API</a></li>
 </ul>
 </li>
 <li><a href="#api-examples">API examples</a><ul>
 <li><a href="#news-api">News API</a></li>
-<li><a href="stocktwits-api">StockTwits API</a></li>
-<li><a href="nasa-api">NASA API</a></li>
+<li><a href="#stocktwits-api">StockTwits API</a></li>
+<li><a href="#nasa-api">NASA API</a></li>
 </ul>
 </li>
 <li><a href="#additional-resources">Additional Resources</a></li>
 </ul>
 <hr>
-<h2 id="what-is-api-">What is API ?</h2>
+<h2 id="what-is-api-"><span id="api">What is API ?</span></h2>
 <ul>
 <li>An application programming interface (API) is an interface or communication protocol between different parts of a computer program intended to simplify the implementation and maintenance of software.</li>
 <li>API has been often used to refer to a specific kind of interface between a client and a server</li>
 <li><em>Web API</em> : client makes a request in a specific format, it will always get a response in a specific format or initiate a defined action from a server</li>
 <li>Here is a short video for API [YouTube] (<a href="https://www.youtube.com/watch?v=s7wmiS2mSXY" target="_blank">https://www.youtube.com/watch?v=s7wmiS2mSXY</a>)</li>
 </ul>
-<h3 id="web-api">Web API</h3>
+<h3 id="web-api"><span id="web-api">Web API</span></h3>
 <ul>
 <li>API is typically defined as a set of specifications, such as Hypertext Transfer Protocol (HTTP) request messages, along with a definition of the structure of response messages, usually in an Extensible Markup Language (XML) or JavaScript Object Notation (JSON) format</li>
 <li>In the social media space, web APIs have allowed web communities to facilitate sharing content and data between communities and applications.</li>
 </ul>
-<h3 id="postman-api">Postman API</h3>
+<h3 id="postman-api"><span id="postman">Postman API</span></h3>
 <ul>
 <li>The <a href="https://docs.api.getpostman.com/?version=latest" target="_blank">Postman</a> API allows you to programmatically access data stored in Postman account with ease</li>
 <li>You need a valid API Key to send requests to the API endpoints</li>
@@ -253,8 +253,8 @@ focuses on testing API accessibility via Postman. We demonstrate three cases of 
 <li>Response to every request is sent in <strong>JSON</strong> format</li>
 <li>The request method (verb) determines the nature of action you intend to perform. A request made using the <strong>GET</strong> method implies that you want to fetch something from Postman, and <strong>POST</strong> implies you want to save something new to Postman</li>
 </ul>
-<h1 id="api-examples">API examples</h1>
-<h2 id="news-api">News API</h2>
+<h1 id="api-examples"><span id="api-examples">API examples</span></h1>
+<h2 id="news-api"><span id="news-api">News API</span></h2>
 <p>News API is great as a data source for news tickers and other applications where you want to show your users live headlines. News API tracks headlines in 7 categories across over 50 countries, and at over a hundred top publications and blogs, in near real time</p>
 <ul>
 <li><p>Read <strong>Term of USE</strong> before doing it!  <a href="https://newsapi.org/terms" target="_blank">Term</a></p>
@@ -388,7 +388,7 @@ focuses on testing API accessibility via Postman. We demonstrate three cases of 
 main()
 </code></pre>
 <p><img src="https://makeawebsitehub.com/wp-content/uploads/2016/04/social_media.jpg" alt="James Quick"> </p>
-<h2 id="stocktwits">StockTwits</h2>
+<h2 id="stocktwits-api"><span id="stocktwits-api">StockTwits API</span></h2>
 <ul>
 <li><p>Find list of symbol used by stocktwits <a href="https://api.stocktwits.com/symbol-sync/symbols.csv" target="_blank">here</a></p>
 </li>
@@ -594,7 +594,7 @@ STOPWORDS = [<span class="hljs-string">&quot;an&quot;</span>, <span class="hljs-
   <span class="hljs-keyword">return</span>(<span class="hljs-number">2</span>*int(stm[<span class="hljs-string">&quot;basic&quot;</span>] == <span class="hljs-string">&quot;Bullish&quot;</span>) - <span class="hljs-number">1</span> <span class="hljs-keyword">if</span> stm <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">None</span> <span class="hljs-keyword">else</span> <span class="hljs-keyword">None</span>)
 </code></pre>
 <p><img src="https://images-assets.nasa.gov/image/S65-34635/S65-34635~medium.jpg" alt="James Quick"></p>
-<h2 id="nasa">NASA</h2>
+<h2 id="nasa-api"><span id="nasa-api">NASA API</span></h2>
 <p>NASA API portal. The objective of this site is to make NASA data, including imagery, eminently accessible to application developers. The api.nasa.gov catalog is growing</p>
 <p><img src="https://www.nasa.gov/sites/all/themes/custom/nasatwo/images/nasa-logo.svg" alt="James Quick"></p>
 <ul>
@@ -678,7 +678,7 @@ importlib.reload(NasaAPI)
 
 main()
 </code></pre>
-<h2 id="additional-resources">Additional Resources</h2>
+<h2 id="additional-resources"><span id="additional-resources">Additional Resources</span></h2>
 <ul>
 <li><a href="https://www.w3schools.com/python/default.asp" target="_blank">W3schools</a></li>
 <li><a href="https://www.onlinegdb.com/online_python_interpreter" target="_blank">Online Python Interpreter</a></li>
@@ -727,7 +727,7 @@ main()
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Lecture 4","level":"1.5","depth":1,"next":{"title":"Lecture 5","level":"1.6","depth":1,"path":"Lecture 5.md","ref":"Lecture 5.md","articles":[]},"previous":{"title":"Lecture 3","level":"1.4","depth":1,"path":"Lecture 3.md","ref":"Lecture 3.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Lecture 4.md","mtime":"2020-03-13T22:34:14.859Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-15T19:01:03.692Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Lecture 4","level":"1.5","depth":1,"next":{"title":"Lecture 5","level":"1.6","depth":1,"path":"Lecture 5.md","ref":"Lecture 5.md","articles":[]},"previous":{"title":"Lecture 3","level":"1.4","depth":1,"path":"Lecture 3.md","ref":"Lecture 3.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Lecture 4.md","mtime":"2020-03-18T17:14:26.335Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-19T11:07:31.212Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
